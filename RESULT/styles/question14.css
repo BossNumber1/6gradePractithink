@@ -36,4 +36,5 @@
     left: calc(50% - 639.18px / 2);
     width: 639.18px;
     height: 296.15px;
+    border: 1px solid;
 }

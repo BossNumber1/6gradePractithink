@@ -33,8 +33,9 @@
 /* content styles */
 
 .content2 {
-    top: 125px;
-    left: calc(50% - 351.69px / 2);
-    width: 351.69px;
-    height: 276px;
+    top: 100px;
+    left: calc(50% - 397px / 2);
+    width: 397px;
+    height: 223px;
+    border: 1px solid;
 }
