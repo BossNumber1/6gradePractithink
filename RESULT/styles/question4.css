@@ -39,3 +39,38 @@
     height: 157px;
     border: 1px solid;
 }
+
+.topRow4,
+.bottomRow4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid;
+}
+
+.topRow4 {
+    height: 45px;
+    margin-bottom: 55px;
+}
+
+.bottomRow4 {
+    left: calc(50% - 520px / 2);
+    width: 520px;
+    height: 57px;
+}
+
+.topRow4 div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    width: 70px;
+    height: 45px;
+    background: #369cb7;
+    opacity: 0.3;
+    border: 1px solid #369cb7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0px 15px;
+}
