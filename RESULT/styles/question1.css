@@ -42,26 +42,3 @@
     justify-content: space-between;
     /* border: 1px solid; */
 }
-
-.content1 input {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 6px 16px;
-    width: 88px;
-    height: 30px;
-    box-sizing: border-box;
-    border-radius: 5px;
-    text-align: center;
-    margin-left: 20px;
-    border: 1px solid;
-}
-
-#secondDiv1 input,
-#fourthDiv1 input {
-    margin-left: 27px;
-}
-
-.content1 img {
-    margin-left: 7px;
-}

@@ -41,12 +41,3 @@
     align-items: center;
     justify-content: space-between;
 }
-
-.content5 input {
-    width: 57px;
-    height: 30.15px;
-    border: 1px solid;
-    border-radius: 5px;
-    text-align: center;
-    margin: 0px 5px;
-}

@@ -37,29 +37,3 @@
     width: 639.18px;
     height: 296.15px;
 }
-
-.bottomRow14 {
-    top: 35px;
-    left: calc(50% - 163px / 2);
-    width: 163px;
-    height: 30.15px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    /* below text styles */
-
-    font-weight: 600;
-    font-style: normal;
-    size: 18px;
-    line-height: 21.94px;
-}
-
-.content14 input {
-    width: 57px;
-    height: 30.15px;
-    margin: 0px 10px;
-    border: 1px solid;
-    border-radius: 5px;
-    text-align: center;
-}

@@ -38,39 +38,3 @@
     width: 314px;
     height: 280px;
 }
-
-.figure19 {
-    left: calc(50% - 311px / 2);
-    width: 311px;
-    height: 260px;
-}
-
-.input19 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    top: -10px;
-    left: calc(50% - 97px / 2);
-    width: 97px;
-    height: 30px;
-}
-
-.input19 input {
-    display: flex;
-    padding: 6px 16px;
-    width: 64px;
-    height: 30px;
-    border: 1px solid #2f2f2f;
-    box-sizing: border-box;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.input19:not(input) {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 18px;
-    color: #2f2f2f;
-    text-align: center;
-}

@@ -40,26 +40,3 @@
     width: 628px;
     height: 85.31px;
 }
-
-.content18 input {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 6px 16px;
-    width: 56.85px;
-    height: 30px;
-    border: 1px solid #2f2f2f;
-    box-sizing: border-box;
-    border-radius: 5px;
-    margin: 0 10px;
-    text-align: center;
-}
-
-.topRow18,
-.bottomRow18 {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 23px;
-}

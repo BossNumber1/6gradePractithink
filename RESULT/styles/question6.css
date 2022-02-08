@@ -38,38 +38,3 @@
     width: 182px;
     height: 209px;
 }
-
-.figure6 {
-    width: 182px;
-    height: 149px;
-}
-
-.input6 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    top: 28px;
-    left: calc(50% - 97px / 2);
-    width: 177px;
-    height: 30px;
-}
-
-.input6 input {
-    display: flex;
-    padding: 6px 16px;
-    width: 64px;
-    height: 30px;
-    border: 1px solid #2f2f2f;
-    box-sizing: border-box;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.input6:not(input) {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 18px;
-    color: #2f2f2f;
-    text-align: center;
-}

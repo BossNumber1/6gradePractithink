@@ -40,27 +40,3 @@
     align-items: center;
     justify-content: space-between;
 }
-
-.leftColumn13,
-.rightColumn13 {
-    width: 210px;
-    height: 194px;
-}
-
-.leftColumn13 div,
-.rightColumn13 div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 25px;
-}
-
-.content13 input {
-    width: 54px;
-    height: 30px;
-    border: 1px solid #2f2f2f;
-    box-sizing: border-box;
-    border-radius: 5px;
-    margin-left: 10px;
-    text-align: center;
-}

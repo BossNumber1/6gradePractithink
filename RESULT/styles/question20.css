@@ -38,18 +38,3 @@
     width: 395px;
     height: 140.46px;
 }
-
-.content20 div {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 25px;
-}
-
-.content20 input {
-    width: 57px;
-    height: 30.15px;
-    border: 1px solid;
-    border-radius: 5px;
-    text-align: center;
-}
