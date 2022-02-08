@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>TOTAL | 5 CLASS</title>
+        <script
+            type="text/javascript"
+            src="./propeller/src/propeller.js"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"
+        />
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="./common.css" />
+    </head>
+    <body>
+        <div class="app">
+            <div class="question1">
+                <div class="nameTask">Question 1</div>
+                <div class="app1">
+                    <div class="titlePage1">Add and subtract numbers.</div>
+                    <div class="lineUnderHeading1"></div>
+                    <div class="content1">
+                        <div>
+                            <img
+                                src="./pictures/1que/expression1.svg"
+                                alt="expression"
+                            />
+                            <input type="text" id="firstNumber1" />
+                        </div>
+                        <div id="secondDiv1">
+                            <img
+                                src="./pictures/1que/expression2.svg"
+                                alt="expression"
+                            />
+                            <input type="text" id="secondNumber1" />
+                        </div>
+                        <div>
+                            <img
+                                src="./pictures/1que/expression3.svg"
+                                alt="expression"
+                            />
+                            <input type="text" id="thirdNumber1" />
+                        </div>
+                        <div id="fourthDiv1">
+                            <img
+                                src="./pictures/1que/expression4.svg"
+                                alt="expression"
+                            />
+                            <input type="text" id="fourthNumber1" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question2">
+                <div class="nameTask">Question 2</div>
+                <div class="app2">
+                    <div class="titlePage2">
+                        Find the volume of the parallelepiped.
+                    </div>
+                    <div class="lineUnderHeading2"></div>
+                    <div class="content2">
+                        <div class="figure2">
+                            <img
+                                src="./pictures/2que/figure.svg"
+                                alt="figure"
+                            />
+                        </div>
+                        <div class="input2">
+                            <input type="text" id="firstNumber2" />
+                            <img
+                                src="./pictures/2que/textPicture.svg"
+                                alt="cm"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question3">
+                <div class="nameTask">Question 3</div>
+                <div class="app3">
+                    <div class="titlePage3">
+                        Connect the metric units and their equivalents.
+                    </div>
+                    <div class="lineUnderHeading3"></div>
+                    <div class="content3">
+                        <div class="topRow3">
+                            <div class="leftColumn3">
+                                <div class="firstRow3">
+                                    <div>7 liters =</div>
+                                    <div
+                                        class="place3"
+                                        ondragstart="drag3(event)"
+                                        ondrop="drop3(event)"
+                                        ondragover="allowDrop(event)"
+                                        draggable="true"
+                                        id="firstEmpty3"
+                                    ></div>
+                                    <div>milliliters</div>
+                                </div>
+                                <div class="secondRow3">
+                                    <div
+                                        class="place3"
+                                        ondragstart="drag3(event)"
+                                        ondrop="drop3(event)"
+                                        ondragover="allowDrop(event)"
+                                        draggable="true"
+                                        id="secondEmpty3"
+                                    ></div>
+                                    <div>milliliters =</div>
+                                    <div>5 liters</div>
+                                </div>
+                                <div class="thirdRow3">
+                                    <div>6000 milliliters =</div>
+                                    <div
+                                        class="place3"
+                                        ondragstart="drag3(event)"
+                                        ondrop="drop3(event)"
+                                        ondragover="allowDrop(event)"
+                                        draggable="true"
+                                        id="thirdEmpty3"
+                                    ></div>
+                                    <div>liters</div>
+                                </div>
+                            </div>
+                            <div class="rightColumn3">
+                                <div class="firstRow3">
+                                    <div
+                                        class="place3"
+                                        ondragstart="drag3(event)"
+                                        ondrop="drop3(event)"
+                                        ondragover="allowDrop(event)"
+                                        id="fourthEmpty3"
+                                    ></div>
+                                    <div>milliliters =</div>
+                                    <div>8 liters</div>
+                                </div>
+                                <div class="secondRow3">
+                                    <div>4000 milliliters =</div>
+                                    <div
+                                        class="place3"
+                                        ondragstart="drag3(event)"
+                                        ondrop="drop3(event)"
+                                        ondragover="allowDrop(event)"
+                                        draggable="true"
+                                        id="fifthEmpty3"
+                                    ></div>
+                                    <div>liters</div>
+                                </div>
+                                <div class="thirdRow3">
+                                    <div>1 liter =</div>
+                                    <div
+                                        class="place3"
+                                        ondragstart="drag3(event)"
+                                        ondrop="drop3(event)"
+                                        ondragover="allowDrop(event)"
+                                        draggable="true"
+                                        id="sixthEmpty3"
+                                    ></div>
+                                    <div>milliliters</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottomRow3">
+                            <div
+                                ondragstart="drag3(event)"
+                                ondrop="drop3(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="firstBtn3"
+                            >
+                                7000
+                            </div>
+                            <div
+                                ondragstart="drag3(event)"
+                                ondrop="drop3(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="secondBtn3"
+                            >
+                                1000
+                            </div>
+                            <div
+                                ondragstart="drag3(event)"
+                                ondrop="drop3(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="thirdBtn3"
+                            >
+                                6
+                            </div>
+                            <div
+                                ondragstart="drag3(event)"
+                                ondrop="drop3(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="fourthBtn3"
+                            >
+                                5000
+                            </div>
+                            <div
+                                ondragstart="drag3(event)"
+                                ondrop="drop3(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="fifthBtn3"
+                            >
+                                4
+                            </div>
+                            <div
+                                ondragstart="drag3(event)"
+                                ondrop="drop3(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="sixthBtn3"
+                            >
+                                8000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question4">
+                <div class="nameTask">Question 4</div>
+                <div class="app4">
+                    <div class="titlePage4">
+                        Multiply and place each product into the correct box.
+                    </div>
+                    <div class="lineUnderHeading4"></div>
+                    <div class="content4">
+                        <div class="topRow4">
+                            <div
+                                ondragstart="drag4(event)"
+                                ondrop="drop4(event)"
+                                ondragover="allowDrop(event)"
+                                class="expression4"
+                            >
+                                <img
+                                    src="./pictures/4que/expression1.svg"
+                                    id="expression14"
+                                />
+                            </div>
+                            <div
+                                ondragstart="drag4(event)"
+                                ondrop="drop4(event)"
+                                ondragover="allowDrop(event)"
+                                class="expression4"
+                            >
+                                <img
+                                    src="./pictures/4que/expression2.svg"
+                                    id="expression24"
+                                />
+                            </div>
+                            <div
+                                ondragstart="drag4(event)"
+                                ondrop="drop4(event)"
+                                ondragover="allowDrop(event)"
+                                class="expression4"
+                            >
+                                <img
+                                    src="./pictures/4que/expression3.svg"
+                                    id="expression34"
+                                />
+                            </div>
+                            <div
+                                ondragstart="drag4(event)"
+                                ondrop="drop4(event)"
+                                ondragover="allowDrop(event)"
+                                class="expression4"
+                            >
+                                <img
+                                    src="./pictures/4que/expression4.svg"
+                                    id="expression44"
+                                />
+                            </div>
+                            <div
+                                ondragstart="drag4(event)"
+                                ondrop="drop4(event)"
+                                ondragover="allowDrop(event)"
+                                class="expression4"
+                            >
+                                <img
+                                    src="./pictures/4que/expression5.svg"
+                                    id="expression54"
+                                />
+                            </div>
+                            <div
+                                ondragstart="drag4(event)"
+                                ondrop="drop4(event)"
+                                ondragover="allowDrop(event)"
+                                class="expression4"
+                            >
+                                <img
+                                    src="./pictures/4que/expression6.svg"
+                                    id="expression64"
+                                />
+                            </div>
+                        </div>
+                        <div class="bottomRow4">
+                            <div
+                                class="basket4first"
+                                id="firstBasket4"
+                                ondragstart="drag4(event)"
+                                ondrop="drop4(event)"
+                                ondragover="allowDrop(event)"
+                            >
+                                <div
+                                    class="headerBasket4"
+                                    id="headerBasket4first"
+                                >
+                                    Less than 1
+                                </div>
+                            </div>
+                            <div
+                                class="basket4second"
+                                id="secondBasket4"
+                                ondragstart="drag4(event)"
+                                ondrop="drop4(event)"
+                                ondragover="allowDrop(event)"
+                            >
+                                <div
+                                    class="headerBasket4"
+                                    id="headerBasket4second"
+                                >
+                                    Equal to 1
+                                </div>
+                            </div>
+                            <div
+                                class="basket4third"
+                                id="thirdBasket4"
+                                ondragstart="drag4(event)"
+                                ondrop="drop4(event)"
+                                ondragover="allowDrop(event)"
+                            >
+                                <div
+                                    class="headerBasket4"
+                                    id="headerBasket4third"
+                                >
+                                    Greater than 1
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question5">
+                <div class="nameTask">Question 5</div>
+                <div class="app5">
+                    <div class="titlePage5">
+                        Use the graph to answer the question below. How many
+                        more children have voted for ice cream than for apple
+                        pie and carrot cake?
+                    </div>
+                    <div class="lineUnderHeading5"></div>
+                    <div class="content5">
+                        <div>
+                            <img src="./pictures/5que/graph.svg" alt="graph" />
+                        </div>
+                        <div>
+                            <input type="text" id="firstNumber5" />
+                            children
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question6">
+                <div class="nameTask">Question 6</div>
+                <div class="app6">
+                    <div class="titlePage6">
+                        What is the volume of the figure shown below?
+                    </div>
+                    <div class="subtitle">
+                        <img src="./pictures/icon.svg" alt="icon" />
+                        A cube is one unit. Count cubes to find the answer.
+                    </div>
+                    <div class="lineUnderHeading6"></div>
+                    <div class="content6">
+                        <div class="figure6">
+                            <img
+                                src="./pictures/6que/figure.svg"
+                                alt="figure"
+                            />
+                        </div>
+                        <div class="input6">
+                            <input type="text" id="firstNumber6" />
+                            cubic units
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question7">
+                <div class="nameTask">Question 7</div>
+                <div class="app7">
+                    <div class="titlePage7">Multiply decimal numbers.</div>
+                    <div class="lineUnderHeading7"></div>
+                    <div class="content7">
+                        <div>
+                            <img
+                                src="./pictures/7que/expression1.svg"
+                                alt="expression"
+                            />
+                            <input type="text" id="firstNumber7" />
+                        </div>
+                        <div>
+                            <img
+                                src="./pictures/7que/expression2.svg"
+                                alt="expression"
+                            />
+                            <input type="text" id="secondNumber7" />
+                        </div>
+                        <div>
+                            <img
+                                src="./pictures/7que/expression3.svg"
+                                alt="expression"
+                            />
+                            <input type="text" id="thirdNumber7" />
+                        </div>
+                        <div>
+                            <img
+                                src="./pictures/7que/expression4.svg"
+                                alt="expression"
+                            />
+                            <input type="text" id="fourthNumber7" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question8">
+                <div class="nameTask">Question 8</div>
+                <div class="app8">
+                    <div class="titlePage8">
+                        Divide fractions by whole numbers.
+                    </div>
+                    <div class="subtitle8">
+                        <img src="./pictures/icon.svg" alt="icon" />
+                        Use the slash key “/“ to write the fractions. E.g. 3/4
+                    </div>
+                    <div class="lineUnderHeading8"></div>
+                    <div class="content8">
+                        <div class="leftColumn8">
+                            <div>
+                                <img
+                                    src="./pictures/8que/expression1.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="firstNumber8" />
+                            </div>
+                            <div>
+                                <img
+                                    src="./pictures/8que/expression2.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="secondNumber8" />
+                            </div>
+                            <div>
+                                <img
+                                    src="./pictures/8que/expression3.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="thirdNumber8" />
+                            </div>
+                        </div>
+                        <div class="rightColumn8">
+                            <div>
+                                <img
+                                    src="./pictures/8que/expression4.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="fourthNumber8" />
+                            </div>
+                            <div>
+                                <img
+                                    src="./pictures/8que/expression5.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="fifthNumber8" />
+                            </div>
+                            <div>
+                                <img
+                                    src="./pictures/8que/expression6.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="sixthNumber8" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question9">
+                <div class="nameTask">Question 9</div>
+                <div class="app9">
+                    <div class="titlePage9">Find the missing exponent.</div>
+                    <div class="lineUnderHeading9"></div>
+                    <div class="content9">
+                        <div class="leftColumn9">
+                            <div class="topRow9">
+                                10 <input type="text" id="firstNumber9" /> = 100
+                            </div>
+                            <div class="bottomRow9">
+                                10 <input type="text" id="secondNumber9" /> = 1
+                                000
+                            </div>
+                        </div>
+                        <div class="rightColumn9">
+                            <div class="topRow9">
+                                10 <input type="text" id="thirdNumber9" /> = 10
+                                000
+                            </div>
+                            <div class="bottomRow9">
+                                10 <input type="text" id="fourthNumber9" /> =
+                                100 000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question10">
+                <div class="nameTask">Question 10</div>
+                <div class="app10">
+                    <div class="titlePage10">
+                        Move the rays to make an angle of 130 degrees.
+                    </div>
+                    <div class="lineUnderHeading10"></div>
+                    <div class="content10">
+                        <div class="protractor10">
+                            <img
+                                src="./pictures/10que/protractor.svg"
+                                alt="protractor"
+                            />
+                        </div>
+                        <div class="arrows10">
+                            <div class="leftArrow">
+                                <div class="leftEdge"></div>
+                                <img
+                                    src="./pictures/10que/leftArrow.svg"
+                                    alt="leftArrow"
+                                    class="imgRuler"
+                                />
+                                <div class="rightEdge"></div>
+                            </div>
+                            <img
+                                src="./pictures/10que/rightArrow.svg"
+                                alt="rightArrow"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question11">
+                <div class="nameTask">Question 11</div>
+                <div class="app11">
+                    <div class="titlePage11">Divide fractions.</div>
+                    <div class="subtitle">
+                        <img src="./pictures/icon.svg" alt="icon" />
+                        Use the slash key “/” to write the fractions. E.g. 3/4
+                    </div>
+                    <div class="lineUnderHeading11"></div>
+                    <div class="content11">
+                        <div class="leftColumn11">
+                            <div>
+                                <img
+                                    src="./pictures/11que/expression1.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="firstNumber11" />
+                            </div>
+                            <div>
+                                <img
+                                    src="./pictures/11que/expression2.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="secondNumber11" />
+                            </div>
+                            <div>
+                                <img
+                                    src="./pictures/11que/expression3.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="thirdNumber11" />
+                            </div>
+                        </div>
+                        <div class="rightColumn11">
+                            <div>
+                                <img
+                                    src="./pictures/11que/expression4.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="fourthNumber11" />
+                            </div>
+                            <div>
+                                <img
+                                    src="./pictures/11que/expression5.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="fifthNumber11" />
+                            </div>
+                            <div>
+                                <img
+                                    src="./pictures/11que/expression6.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="sixthNumber11" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question12">
+                <div class="nameTask">Question 12</div>
+                <div class="app12">
+                    <div class="titlePage12">
+                        Drag and drop the definition to the picture it
+                        describes.
+                    </div>
+                    <div class="lineUnderHeading12"></div>
+                    <div class="content12">
+                        <div class="figures12">
+                            <img
+                                src="./pictures/12que/figures.svg"
+                                alt="figures"
+                            />
+                        </div>
+                        <div class="places12">
+                            <div
+                                ondragstart="drag12(event)"
+                                ondrop="drop12(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                class="firstPlace12"
+                                id="firstEmpty12"
+                            ></div>
+                            <div
+                                ondragstart="drag12(event)"
+                                ondrop="drop12(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                class="secondPlace12"
+                                id="secondEmpty12"
+                            ></div>
+                            <div
+                                ondragstart="drag12(event)"
+                                ondrop="drop12(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                class="thirdPlace12"
+                                id="thirdEmpty12"
+                            ></div>
+                            <div
+                                ondragstart="drag12(event)"
+                                ondrop="drop12(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                class="fourthPlace12"
+                                id="fourthEmpty12"
+                            ></div>
+                        </div>
+                        <div class="btns12">
+                            <div
+                                ondragstart="drag12(event)"
+                                ondrop="drop12(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="firstBtn12"
+                            >
+                                radius
+                            </div>
+                            <div
+                                ondragstart="drag12(event)"
+                                ondrop="drop12(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="secondBtn12"
+                            >
+                                diameter
+                            </div>
+                            <div
+                                ondragstart="drag12(event)"
+                                ondrop="drop12(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="thirdBtn12"
+                            >
+                                centre
+                            </div>
+                            <div
+                                ondragstart="drag12(event)"
+                                ondrop="drop12(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="fourthBtn12"
+                            >
+                                chord
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question13">
+                <div class="nameTask">Question 13</div>
+                <div class="app13">
+                    <div class="titlePage13">Add the fractions.</div>
+                    <div class="subtitle">
+                        <img src="./pictures/icon.svg" alt="icon" />
+                        Use the slash key “/” to write the fractions. E.g. 3/4
+                    </div>
+                    <div class="lineUnderHeading13"></div>
+                    <div class="content13">
+                        <div class="leftColumn13">
+                            <div>
+                                <img
+                                    src="./pictures/13que/expression1.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="firstNumber13" />
+                            </div>
+                            <div>
+                                <img
+                                    src="./pictures/13que/expression2.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="secondNumber13" />
+                            </div>
+                            <div>
+                                <img
+                                    src="./pictures/13que/expression3.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="thirdNumber13" />
+                            </div>
+                        </div>
+                        <div class="rightColumn13">
+                            <div>
+                                <img
+                                    src="./pictures/13que/expression4.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="fourthNumber13" />
+                            </div>
+                            <div>
+                                <img
+                                    src="./pictures/13que/expression5.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="fifthNumber13" />
+                            </div>
+                            <div>
+                                <img
+                                    src="./pictures/13que/expression6.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="sixthNumber13" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question14">
+                <div class="nameTask">Question 14</div>
+                <div class="app14">
+                    <div class="titlePage14">
+                        Use the model to multiply numbers.
+                    </div>
+                    <div class="lineUnderHeading14"></div>
+                    <div class="content14">
+                        <div class="topRow14">
+                            <img
+                                src="./pictures/14que/figures.svg"
+                                alt="figures"
+                            />
+                        </div>
+                        <div class="bottomRow14">
+                            4 × 0, 13 =
+                            <input type="text" id="firstNumber14" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question15">
+                <div class="nameTask">Question 15</div>
+                <div class="app15">
+                    <div class="titlePage15">Сomplete the table.</div>
+                    <div class="subtitle">
+                        <img src="./pictures/icon.svg" alt="icon" />
+                        Use the equation w=c+3.
+                    </div>
+                    <div class="lineUnderHeading15"></div>
+                    <div class="content15">
+                        <div class="leftColumn15">
+                            <div class="first1row15">C</div>
+                            <div class="second1row15">1</div>
+                            <div class="third1row15">2</div>
+                            <div class="fourth1row15">3</div>
+                            <div class="fifth1row15">4</div>
+                            <div class="sixth1row15">8</div>
+                        </div>
+                        <div class="rightColumn15">
+                            <div class="first2row15">W</div>
+                            <div class="second2row15">4</div>
+                            <div class="third2row15">
+                                <input type="text" id="firstNumber15" />
+                            </div>
+                            <div class="fourth2row15">
+                                <input type="text" id="secondNumber15" />
+                            </div>
+                            <div class="fifth2row15">
+                                <input type="text" id="thirdNumber15" />
+                            </div>
+                            <div class="sixth2row15">
+                                <input type="text" id="fourthNumber15" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question16">
+                <div class="nameTask">Question 16</div>
+                <div class="app16">
+                    <div class="titlePage16">
+                        Multiply decimals and whole numbers.
+                    </div>
+                    <div class="lineUnderHeading16"></div>
+                    <div class="content16">
+                        <div>
+                            <img
+                                src="./pictures/16que/expression1.svg"
+                                alt="expression"
+                            />
+                            <input type="text" id="firstNumber16" />
+                        </div>
+                        <div>
+                            <img
+                                src="./pictures/16que/expression2.svg"
+                                alt="expression"
+                            />
+                            <input type="text" id="secondNumber16" />
+                        </div>
+                        <div>
+                            <img
+                                src="./pictures/16que/expression3.svg"
+                                alt="expression"
+                            />
+                            <input type="text" id="thirdNumber16" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question17">
+                <div class="nameTask">Question 17</div>
+                <div class="app17">
+                    <div class="titlePage17">Complete the pattern.</div>
+                    <div class="lineUnderHeading17"></div>
+                    <div class="content17">
+                        <div class="topRow17">
+                            <div>
+                                <img
+                                    src="./pictures/17que/firstGroup.svg"
+                                    alt="first group"
+                                />
+                            </div>
+                            <div
+                                class="place17"
+                                ondragstart="drag17(event)"
+                                ondrop="drop17(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="firstEmpty17"
+                            ></div>
+                            <div>
+                                <img
+                                    src="./pictures/17que/secondGroup.svg"
+                                    alt="second group"
+                                />
+                            </div>
+                        </div>
+                        <div class="bottomRow17">
+                            <div
+                                ondragstart="drag17(event)"
+                                ondrop="drop17(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="firstBtn17"
+                            >
+                                16
+                            </div>
+                            <div
+                                ondragstart="drag17(event)"
+                                ondrop="drop17(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="secondBtn17"
+                            >
+                                45
+                            </div>
+                            <div
+                                ondragstart="drag17(event)"
+                                ondrop="drop17(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="thirdBtn17"
+                            >
+                                12
+                            </div>
+                            <div
+                                ondragstart="drag17(event)"
+                                ondrop="drop17(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="fourthBtn17"
+                            >
+                                19
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question18">
+                <div class="nameTask">Question 18</div>
+                <div class="app18">
+                    <div class="titlePage18">Add the units of time.</div>
+                    <div class="lineUnderHeading18"></div>
+                    <div class="content18">
+                        <div class="topRow18">
+                            <div>3 years 9 months + 3 years 9 months =</div>
+                            <div><input type="text" id="firstNumber18" /></div>
+                            <div>years</div>
+                            <div><input type="text" id="secondNumber18" /></div>
+                            <div>months</div>
+                        </div>
+                        <div class="bottomRow18">
+                            <div>2 years 3 months + 1 years 4 months =</div>
+                            <div>
+                                <input type="text" id="thirdNumber18" />
+                            </div>
+                            <div>years</div>
+                            <div><input type="text" id="fourthNumber18" /></div>
+                            <div>months</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question19">
+                <div class="nameTask">Question 19</div>
+                <div class="app19">
+                    <div class="titlePage19">
+                        Find the perimeter of the shape.
+                    </div>
+                    <div class="lineUnderHeading19"></div>
+                    <div class="content19">
+                        <div class="figure19">
+                            <img
+                                src="./pictures/19que/figure.svg"
+                                alt="figure"
+                            />
+                        </div>
+                        <div class="input19">
+                            <input type="text" id="firstNumber19" />
+                            km
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question20">
+                <div class="nameTask">Question 20</div>
+                <div class="app20">
+                    <div class="titlePage20">Find the answers.</div>
+                    <div class="lineUnderHeading20"></div>
+                    <div class="content20">
+                        <div>
+                            <img
+                                src="./pictures/20que/expression1.svg"
+                                alt="expression"
+                            />
+                            <input type="text" id="firstNumber20" />
+                        </div>
+                        <div>
+                            <img
+                                src="./pictures/20que/expression2.svg"
+                                alt="expression"
+                            />
+                            <input type="text" id="secondNumber20" />
+                        </div>
+                        <div>
+                            <img
+                                src="./pictures/20que/expression3.svg"
+                                alt="expression"
+                            />
+                            <input type="text" id="thirdNumber20" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btnsEnd">
+                <div class="submit">
+                    <input type="button" value="Check my answers" id="submit" />
+                </div>
+                <div class="clear">
+                    <div value="Clear" id="clear">
+                        <img src="./pictures/reset.svg" alt="reset" />
+                        <div class="nameBtn">Clear</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="./index.js"></script>
+</html>

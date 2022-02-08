@@ -1,0 +1,131 @@
+.app3 {
+    width: 1170px;
+    height: 502px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage3 {
+    top: 25px;
+    left: calc(50% - 770px / 2);
+    width: 770px;
+    height: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #2f2f2f;
+}
+
+.lineUnderHeading3 {
+    top: 70px;
+    position: absolute;
+    width: 1169px;
+    height: 0px;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+/* content styles */
+
+.content3 {
+    top: 100px;
+    left: calc(50% - 703px / 2);
+    width: 703px;
+    height: 260px;
+}
+
+/* top row styles */
+
+.topRow3 {
+    height: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leftColumn3 {
+    width: 301px;
+    height: 175px;
+}
+
+.rightColumn3 {
+    width: 301px;
+    height: 175px;
+}
+
+.firstRow3,
+.secondRow3,
+.thirdRow3 {
+    height: 45px;
+    margin-bottom: 17.5px;
+    display: flex;
+    align-items: center;
+}
+
+.firstRow3 div,
+.secondRow3 div {
+    margin-right: 15px;
+}
+
+.rightColumn3 .secondRow3 div:nth-child(1) {
+    margin-right: 0;
+}
+
+.firstRow3 div:nth-child(1),
+.secondRow3 div:nth-child(1),
+.thirdRow3 div:nth-child(1) {
+    margin-left: 0;
+}
+
+/* bottom row styles */
+
+.bottomRow3 {
+    top: 40px;
+    left: calc(50% - 520px / 2);
+    width: 520px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottomRow3 div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    width: 70px;
+    height: 45px;
+    background: #369cb7;
+    border: 1px solid #369cb7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: white;
+    cursor: grab;
+}
+
+.bottomRow3 div:not(:last-child) {
+    margin-right: 30px;
+}
+
+.place3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    width: 70px;
+    height: 45px;
+    background: #369cb7;
+    opacity: 0.3;
+    border: 1px solid #369cb7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0px 15px;
+}

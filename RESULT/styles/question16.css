@@ -1,0 +1,55 @@
+.app16 {
+    width: 1170px;
+    height: 383px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage16 {
+    top: 25px;
+    left: calc(50% - 770px / 2);
+    width: 770px;
+    height: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #2f2f2f;
+}
+
+.lineUnderHeading16 {
+    top: 70px;
+    position: absolute;
+    width: 1169px;
+    height: 0px;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+/* content styles */
+
+.content16 {
+    top: 100px;
+    left: calc(50% - 195px / 2);
+    width: 195px;
+    height: 140.46px;
+}
+
+.content16 div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.content16 input {
+    width: 57px;
+    height: 30.15px;
+    border: 1px solid;
+    border-radius: 5px;
+    text-align: center;
+}

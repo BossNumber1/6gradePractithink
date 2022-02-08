@@ -1,0 +1,91 @@
+.app10 {
+    width: 1170px;
+    height: 452px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage10 {
+    top: 25px;
+    width: 1170px;
+    height: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2f2f2f;
+}
+
+.lineUnderHeading10 {
+    position: absolute;
+    width: 1169px;
+    height: 0px;
+    top: 71px;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+/* content styles */
+
+.content10 {
+    top: 100px;
+    left: calc(50% - 397.26px / 2);
+    width: 397.26px;
+    height: 209.49px;
+}
+
+.arrows10 {
+    top: -113px;
+    left: 35px;
+    height: 70px;
+    width: 335px;
+}
+
+.arrows10 img:nth-child(2) {
+    position: absolute;
+    top: 50px;
+    left: 165px;
+}
+
+/* leftArrow styles */
+
+.leftArrow {
+    position: absolute;
+    top: -51px;
+    display: flex;
+    left: 165px;
+    height: 100px;
+    width: 100px;
+}
+
+.imgRuler {
+    position: absolute;
+    margin-left: -330px;
+}
+
+.leftEdge,
+.rightEdge {
+    display: flex;
+    width: 50px;
+    height: 57px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.leftEdge {
+    top: 30px;
+    left: -170px;
+    z-index: 1;
+}
+
+.rightEdge {
+    top: 80px;
+    left: -41px;
+}

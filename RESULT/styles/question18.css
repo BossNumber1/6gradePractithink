@@ -1,0 +1,65 @@
+.app18 {
+    width: 1170px;
+    height: 328px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage18 {
+    top: 25px;
+    width: 1170px;
+    height: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #2f2f2f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lineUnderHeading18 {
+    position: absolute;
+    width: 1169px;
+    height: 0px;
+    top: 71px;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+/* content styles */
+
+.content18 {
+    top: 102px;
+    left: calc(50% - 628px / 2);
+    width: 628px;
+    height: 85.31px;
+}
+
+.content18 input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    width: 56.85px;
+    height: 30px;
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.topRow18,
+.bottomRow18 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 23px;
+}
