@@ -33,9 +33,9 @@
 /* content styles */
 
 .content4 {
-    top: 126px;
-    left: calc(50% - 870px / 2);
-    width: 870px;
-    height: 329px;
+    top: 100px;
+    left: calc(50% - 545px / 2);
+    width: 545px;
+    height: 157px;
     border: 1px solid;
 }

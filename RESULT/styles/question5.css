@@ -33,10 +33,10 @@
 /* content styles */
 
 .content5 {
-    top: 146px;
-    left: 70px;
-    width: 754px;
-    height: 376px;
+    top: 100px;
+    left: calc(50% - 344px / 2);
+    width: 344px;
+    height: 134px;
     display: flex;
     align-items: center;
     justify-content: space-between;
