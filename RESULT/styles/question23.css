@@ -37,5 +37,21 @@
     left: calc(50% - 625.5px / 2);
     width: 625.5px;
     height: 45px;
-    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content23 div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    height: 45px;
+    background: #ffffff;
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
 }
