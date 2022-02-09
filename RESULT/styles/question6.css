@@ -33,9 +33,88 @@
 /* content styles */
 
 .content6 {
-    top: 100px;
+    top: 110px;
     left: calc(50% - 590px / 2);
     width: 590px;
     height: 87px;
-    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.firstColumn6 {
+    width: 128px;
+    height: 82px;
+}
+
+.secondColumn6 {
+    width: 126px;
+    height: 82px;
+}
+
+.thirdColumn6 {
+    width: 136px;
+    height: 87px;
+}
+
+.firstColumn6 .topRow6 {
+    width: 128px;
+    height: 22px;
+}
+
+.secondColumn6 .topRow6 {
+    width: 126px;
+    height: 22px;
+}
+
+.thirdColumn6 .topRow6 {
+    width: 136px;
+    height: 22px;
+}
+
+.firstColumn6 .bottomRow6,
+.secondColumn6 .bottomRow6,
+.thirdColumn6 .bottomRow6 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 23px;
+}
+
+.firstColumn6 .bottomRow6:not(input),
+.secondColumn6 .bottomRow6:not(input),
+.thirdColumn6 .bottomRow6:not(input) {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.firstColumn6 .bottomRow6 {
+    width: 95px;
+    height: 45px;
+}
+
+.secondColumn6 .bottomRow6 {
+    width: 93px;
+    height: 45px;
+}
+
+.thirdColumn6 .bottomRow6 {
+    width: 88px;
+    height: 50px;
+}
+
+.content6 input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    width: 56.85px;
+    height: 30px;
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
 }
