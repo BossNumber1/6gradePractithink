@@ -33,12 +33,43 @@
 /* content styles */
 
 .content9 {
-    top: 100px;
+    top: 135px;
     left: calc(50% - 262.5px / 2);
     width: 262.5px;
     height: 89.15px;
+}
+
+.topRow9 {
+    height: 34px;
+    margin-bottom: 23px;
+}
+
+.bottomRow9 {
+    left: calc(50% - 129px / 2);
+    width: 129px;
+    height: 30.15px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    border: 1px solid;
+    justify-content: space-evenly;
+}
+
+.content9 input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    width: 56.85px;
+    height: 30px;
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.bottomRow9:not(input) {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
 }
