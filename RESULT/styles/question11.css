@@ -37,8 +37,34 @@
     left: calc(50% - 447px / 2);
     width: 447px;
     height: 146.31px;
+}
+
+.topRow11 {
+    margin-bottom: 35px;
+}
+
+.bottomRow11 {
+    left: calc(50% - 47px / 2);
+    width: 47px;
+    height: 70.31px;
+}
+
+.bottomRow11 input {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    border: 1px solid;
+    padding: 6px 16px;
+    width: 51.86px;
+    height: 30px;
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.devil11 {
+    text-align: center;
+    margin-top: -8px;
+    margin-left: -2px;
 }
