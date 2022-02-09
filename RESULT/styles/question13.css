@@ -32,12 +32,47 @@
 /* content styles */
 
 .content13 {
-    top: 100px;
-    left: calc(50% - 303px / 2);
-    width: 303px;
-    height: 258px;
+    top: 80px;
+    left: calc(50% - 555px / 2);
+    width: 555px;
+    height: 209.15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid;
+}
+
+.leftColumn13 {
+    width: 303px;
+    height: 209.15px;
+}
+
+.rightColumn13 {
+    top: -17px;
+    width: 161px;
+    height: 31.53px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.content13 input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    width: 70px;
+    height: 30px;
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0px 10px 0px 5px;
+}
+
+.rightColumn13:not(input) {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
 }
