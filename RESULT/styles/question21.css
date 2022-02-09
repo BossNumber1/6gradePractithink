@@ -33,9 +33,34 @@
 /* content styles */
 
 .content21 {
-    top: 100px;
+    top: 110px;
     left: calc(50% - 500px / 2);
     width: 500px;
     height: 60px;
-    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.firstExpression21,
+.secondExpression21 {
+    width: 146px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content21 input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    width: 56.85px;
+    height: 30px;
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
 }
