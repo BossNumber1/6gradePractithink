@@ -1925,6 +1925,42 @@ function question21() {
     }
 }
 
+// 22 QUESTION
+
+let numbers22 = {
+    firstNumber: "",
+};
+
+gettingDataFromFields(1, [8], 22, numbers22);
+
+function question22() {
+    if (numbers22.firstNumber != "") {
+        succerrorAndCreateMiniIcon(1, 22, numbers22);
+
+        // выносим общий статус к номеру вопроса
+
+        if (numbers22.firstNumber === "right") {
+            addImage(
+                "success",
+                document.getElementsByClassName("question22"),
+                "app22",
+                22
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question22"),
+                "app22",
+                22
+            );
+
+            // addCorrectAnswerQuestion22();
+        }
+    } else {
+        highlightUnselectedBlocks(1, 22, numbers22);
+    }
+}
+
 // RESULT
 
 document.getElementById("submit").onclick = function () {
@@ -1949,7 +1985,7 @@ document.getElementById("submit").onclick = function () {
     question19();
     question20();
     question21();
-    // question22();
+    question22();
     // question23();
     // question24();
     // question25();
