@@ -260,7 +260,7 @@ function addCorrectAnswerQuestion7() {
 }
 
 function addCorrectAnswerQuestion8() {
-    document.getElementsByClassName("app8")[0].style.height = "850px";
+    document.getElementsByClassName("app8")[0].style.height = "500px";
     addCorrectAnswer("correctAnswer8", "8que", "app8", "contentCorrectAnswer8");
 }
 
@@ -2083,6 +2083,7 @@ document.getElementById("submit").onclick = function () {
     // question7();
     addCorrectAnswerQuestion7();
     question8();
+    addCorrectAnswerQuestion8();
     question9();
     // question10();
     question11();
