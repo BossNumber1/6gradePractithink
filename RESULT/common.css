@@ -220,6 +220,10 @@ body {
     top: 180px;
 }
 
+.correctAnswer22 {
+    top: 120px;
+}
+
 .correctAnswer15 {
     top: 220px;
 }
@@ -334,6 +338,10 @@ body {
 
 .contentCorrectAnswer21 {
     top: 50px;
+}
+
+.contentCorrectAnswer22 {
+    top: 20px;
 }
 
 .contentCorrectAnswer5 {
