@@ -537,6 +537,12 @@ function addMiniIcon(elem, status) {
     }
 
     if (
+        elem.parentElement.parentElement.parentElement.className === "content15"
+    ) {
+        objDiv.style.marginTop = "-17px";
+    }
+
+    if (
         elem.parentElement.parentElement.parentElement.parentElement
             .className === "content22"
     ) {
@@ -1638,45 +1644,24 @@ let numbers15 = {
     firstNumber: "",
     secondNumber: "",
     thirdNumber: "",
-    fourthNumber: "",
 };
 
-// gettingDataFromFields(4, [5, 6, 7, 11], 15, numbers15);
+gettingDataFromFields(3, [20, 77, 15], 15, numbers15);
 
 function question15() {
     if (
         numbers15.firstNumber != "" &&
         numbers15.secondNumber != "" &&
-        numbers15.thirdNumber != "" &&
-        numbers15.fourthNumber != ""
+        numbers15.thirdNumber != ""
     ) {
-        succerror(
-            document.getElementById("firstNumber15"),
-            numbers15.firstNumber === "wrong"
-        );
-
-        succerror(
-            document.getElementById("secondNumber15"),
-            numbers15.secondNumber === "wrong"
-        );
-
-        succerror(
-            document.getElementById("thirdNumber15"),
-            numbers15.thirdNumber === "wrong"
-        );
-
-        succerror(
-            document.getElementById("fourthNumber15"),
-            numbers15.fourthNumber === "wrong"
-        );
+        succerrorAndCreateMiniIcon(3, 15, numbers15);
 
         // выносим общий статус к номеру вопроса
 
         if (
             numbers15.firstNumber === "right" &&
             numbers15.secondNumber === "right" &&
-            numbers15.thirdNumber === "right" &&
-            numbers15.fourthNumber === "right"
+            numbers15.thirdNumber === "right"
         ) {
             addImage(
                 "success",
@@ -1692,10 +1677,10 @@ function question15() {
                 15
             );
 
-            addCorrectAnswerQuestion15();
+            // addCorrectAnswerQuestion15();
         }
     } else {
-        highlightUnselectedBlocks(4, 15, numbers15);
+        highlightUnselectedBlocks(3, 15, numbers15);
     }
 }
 
@@ -2021,7 +2006,7 @@ document.getElementById("submit").onclick = function () {
     question12();
     question13();
     question14();
-    // question15();
+    question15();
     // question16();
     // question17();
     question18();
