@@ -1385,41 +1385,17 @@ function question7() {
 
 let numbers8 = {
     firstNumber: "",
-    secondNumber: "",
-    thirdNumber: "",
-    fourthNumber: "",
-    fifthNumber: "",
-    sixthNumber: "",
 };
 
-// gettingDataFromFields(
-//     6,
-//     ["1/6", "1/6", "2/15", "1/8", "1/8", "1/9"],
-//     8,
-//     numbers8
-// );
+gettingDataFromFields(1, [90], 8, numbers8);
 
 function question8() {
-    if (
-        numbers8.firstNumber !== "" &&
-        numbers8.secondNumber !== "" &&
-        numbers8.thirdNumber !== "" &&
-        numbers8.fourthNumber !== "" &&
-        numbers8.fifthNumber !== "" &&
-        numbers8.sixthNumber !== ""
-    ) {
-        succerrorAndCreateMiniIcon(6, 8, numbers8);
+    if (numbers8.firstNumber != "") {
+        succerrorAndCreateMiniIcon(1, 8, numbers8);
 
         // выносим общий статус к номеру вопроса
 
-        if (
-            numbers8.firstNumber === "right" &&
-            numbers8.secondNumber === "right" &&
-            numbers8.thirdNumber === "right" &&
-            numbers8.fourthNumber === "right" &&
-            numbers8.fifthNumber === "right" &&
-            numbers8.sixthNumber === "right"
-        ) {
+        if (numbers8.firstNumber === "right") {
             addImage(
                 "success",
                 document.getElementsByClassName("question8"),
@@ -1434,10 +1410,10 @@ function question8() {
                 8
             );
 
-            addCorrectAnswerQuestion8();
+            // addCorrectAnswerQuestion8();
         }
     } else {
-        highlightUnselectedBlocks(6, 8, numbers8);
+        highlightUnselectedBlocks(1, 8, numbers8);
     }
 }
 
@@ -2032,7 +2008,7 @@ document.getElementById("submit").onclick = function () {
     question5();
     question6();
     // question7();
-    // question8();
+    question8();
     // question9();
     // question10();
     // question11();
