@@ -1477,39 +1477,27 @@ function question9() {
 let numbers11 = {
     firstNumber: "",
     secondNumber: "",
-    thirdNumber: "",
-    fourthNumber: "",
-    fifthNumber: "",
-    sixthNumber: "",
 };
 
-// gettingDataFromFields(
-//     6,
-//     ["1", "20/21", "3/10", "14/15", "8/5", "5/6"],
-//     11,
-//     numbers11
-// );
+gettingDataFromFields(2, [3, 4], 11, numbers11);
 
 function question11() {
-    if (
-        numbers11.firstNumber !== "" &&
-        numbers11.secondNumber !== "" &&
-        numbers11.thirdNumber !== "" &&
-        numbers11.fourthNumber !== "" &&
-        numbers11.fifthNumber !== "" &&
-        numbers11.sixthNumber !== ""
-    ) {
-        succerrorAndCreateMiniIcon(6, 11, numbers11);
+    if (numbers11.firstNumber != "" && numbers11.secondNumber != "") {
+        succerror(
+            document.getElementById("firstNumber11"),
+            numbers11.firstNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("secondNumber11"),
+            numbers11.secondNumber === "wrong"
+        );
 
         // выносим общий статус к номеру вопроса
 
         if (
             numbers11.firstNumber === "right" &&
-            numbers11.secondNumber === "right" &&
-            numbers11.thirdNumber === "right" &&
-            numbers11.fourthNumber === "right" &&
-            numbers11.fifthNumber === "right" &&
-            numbers11.sixthNumber === "right"
+            numbers11.secondNumber === "right"
         ) {
             addImage(
                 "success",
@@ -1525,10 +1513,10 @@ function question11() {
                 11
             );
 
-            addCorrectAnswerQuestion11();
+            // addCorrectAnswerQuestion11();
         }
     } else {
-        highlightUnselectedBlocks(6, 11, numbers11);
+        highlightUnselectedBlocks(2, 11, numbers11);
     }
 }
 
@@ -2029,7 +2017,7 @@ document.getElementById("submit").onclick = function () {
     question8();
     question9();
     // question10();
-    // question11();
+    question11();
     question12();
     question13();
     question14();
