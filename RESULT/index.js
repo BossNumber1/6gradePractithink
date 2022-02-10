@@ -1817,7 +1817,7 @@ let numbers19 = {
     firstNumber: "",
 };
 
-// gettingDataFromFields(1, [42.1], 19, numbers19);
+gettingDataFromFields(1, [48], 19, numbers19);
 
 function question19() {
     if (numbers19.firstNumber != "") {
@@ -1914,7 +1914,7 @@ document.getElementById("submit").onclick = function () {
     // question16();
     // question17();
     question18();
-    // question19();
+    question19();
     // question20();
 
     // question21();
