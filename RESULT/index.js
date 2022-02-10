@@ -2004,6 +2004,67 @@ function question24() {
     }
 }
 
+// 25 QUESTION
+
+let numbers25 = {
+    firstNumber: "",
+    secondNumber: "",
+    thirdNumber: "",
+};
+
+gettingDataFromFields(3, ["-3", "5", "8"], 25, numbers25);
+
+function question25() {
+    if (
+        numbers25.firstNumber != "" &&
+        numbers25.secondNumber != "" &&
+        numbers25.thirdNumber != ""
+    ) {
+        // succerrorAndCreateMiniIcon(3, 25, numbers25);
+
+        succerror(
+            document.getElementById("firstNumber25"),
+            numbers25.firstNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("secondNumber25"),
+            numbers25.secondNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("thirdNumber25"),
+            numbers25.thirdNumber === "wrong"
+        );
+
+        // выносим общий статус к номеру вопроса
+
+        if (
+            numbers25.firstNumber === "right" &&
+            numbers25.secondNumber === "right" &&
+            numbers25.thirdNumber === "right"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question25"),
+                "app25",
+                25
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question25"),
+                "app25",
+                25
+            );
+
+            // addCorrectAnswerQuestion25();
+        }
+    } else {
+        highlightUnselectedBlocks(3, 25, numbers25);
+    }
+}
+
 // RESULT
 
 document.getElementById("submit").onclick = function () {
@@ -2031,5 +2092,5 @@ document.getElementById("submit").onclick = function () {
     question22();
     // question23();
     question24();
-    // question25();
+    question25();
 };
