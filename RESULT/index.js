@@ -1857,14 +1857,35 @@ function question16() {
 
 // 17 QUESTION
 
-function question17() {
-    // получаем содежимое блоков
-    let topRow17 =
-        document.getElementsByClassName("topRow17")[0].children[1].id;
+let selectBtn17 = "",
+    nameSelectedBtn17 = "";
 
-    if (topRow17 !== "firstEmpty17") {
-        // проверяем на верность для создания статуса
-        if (topRow17 === "firstBtn17") {
+document.getElementById("firstBtn17").onclick = function () {
+    selectBtn17 = "right";
+    nameSelectedBtn17 = "firstBtn17";
+
+    commonForSelectBtn("firstBtn17");
+    commonForNoselectedBtn(["secondBtn17"]);
+};
+
+document.getElementById("secondBtn17").onclick = function () {
+    selectBtn17 = "wrong";
+    nameSelectedBtn17 = "secondBtn17";
+
+    commonForSelectBtn("secondBtn17");
+    commonForNoselectedBtn(["firstBtn17"]);
+};
+
+function question17() {
+    if (selectBtn17 !== "") {
+        succerror(
+            document.getElementById(nameSelectedBtn17),
+            selectBtn17 === "wrong"
+        );
+
+        // выносим общий статус к номеру вопроса
+
+        if (selectBtn17 === "right") {
             addImage(
                 "success",
                 document.getElementsByClassName("question17"),
@@ -1872,10 +1893,6 @@ function question17() {
                 17
             );
         } else {
-            document.getElementsByClassName(
-                "topRow17"
-            )[0].children[1].style.border = "2px solid #ED7777";
-
             addImage(
                 "failure",
                 document.getElementsByClassName("question17"),
@@ -1886,7 +1903,10 @@ function question17() {
             addCorrectAnswerQuestion17();
         }
     } else {
-        highlightingUnfillededBlocks(1, 17);
+        document.getElementById("firstBtn17").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("secondBtn17").style.border =
+            "2px solid #FFB47D";
     }
 }
 
@@ -2194,7 +2214,7 @@ document.getElementById("submit").onclick = function () {
     question14();
     question15();
     question16();
-    // question17();
+    question17();
     question18();
     question19();
     question20();
