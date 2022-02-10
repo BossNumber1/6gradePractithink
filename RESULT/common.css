@@ -168,11 +168,14 @@ body {
 .correctAnswer5,
 .correctAnswer7,
 .correctAnswer1,
-.correctAnswer2,
 .correctAnswer8,
 .correctAnswer17,
 .correctAnswer14 {
     top: 160px;
+}
+
+.correctAnswer2 {
+    top: 180px;
 }
 
 .correctAnswer3,
@@ -257,7 +260,7 @@ body {
 }
 
 .contentCorrectAnswer2 {
-    top: 20px;
+    top: 60px;
 }
 
 .contentCorrectAnswer6 {

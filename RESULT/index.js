@@ -230,7 +230,7 @@ function addCorrectAnswerQuestion1() {
 }
 
 function addCorrectAnswerQuestion2() {
-    document.getElementsByClassName("app2")[0].style.height = "600px";
+    document.getElementsByClassName("app2")[0].style.height = "700px";
     addCorrectAnswer("correctAnswer2", "2que", "app2", "contentCorrectAnswer2");
 }
 
@@ -2071,9 +2071,11 @@ document.getElementById("submit").onclick = function () {
     question1();
     addCorrectAnswerQuestion1();
     // question2();
+    addCorrectAnswerQuestion2();
     // question3();
     // question4();
     question5();
+    // addCorrectAnswerQuestion5();
     question6();
     // question7();
     question8();
