@@ -35,7 +35,7 @@
 /* content styles */
 
 .content15 {
-    top: 100px;
+    top: 120px;
     left: calc(50% - 156px / 2);
     width: 156px;
     height: 130.46px;
@@ -67,13 +67,4 @@
     border-radius: 5px;
     text-align: center;
     margin: 0px 10px;
-}
-
-.fahrenheit15 {
-    margin-left: 5px;
-}
-
-.celsius15,
-.fahrenheit15 {
-    top: 3px;
 }
