@@ -1692,7 +1692,7 @@ let numbers16 = {
     thirdNumber: "",
 };
 
-// gettingDataFromFields(3, [6.6, 292, 122.7], 16, numbers16);
+gettingDataFromFields(3, ["-1.45", "-0.7", "0.8"], 16, numbers16);
 
 function question16() {
     if (
@@ -1700,7 +1700,22 @@ function question16() {
         numbers16.secondNumber != "" &&
         numbers16.thirdNumber != ""
     ) {
-        succerrorAndCreateMiniIcon(3, 16, numbers16);
+        // succerrorAndCreateMiniIcon(3, 16, numbers16);
+
+        succerror(
+            document.getElementById("firstNumber16"),
+            numbers16.firstNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("secondNumber16"),
+            numbers16.secondNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("thirdNumber16"),
+            numbers16.thirdNumber === "wrong"
+        );
 
         // выносим общий статус к номеру вопроса
 
@@ -1723,7 +1738,7 @@ function question16() {
                 16
             );
 
-            addCorrectAnswerQuestion16();
+            // addCorrectAnswerQuestion16();
         }
     } else {
         highlightUnselectedBlocks(3, 16, numbers16);
@@ -2007,7 +2022,7 @@ document.getElementById("submit").onclick = function () {
     question13();
     question14();
     question15();
-    // question16();
+    question16();
     // question17();
     question18();
     question19();
