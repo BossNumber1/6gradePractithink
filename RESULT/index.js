@@ -508,7 +508,7 @@ function addMiniIcon(elem, status) {
     }
 
     if (elem.parentElement.parentElement.className === "content19") {
-        objDiv.style.marginTop = "-43px";
+        objDiv.style.marginTop = "-55px";
     }
 
     if (elem.parentElement.parentElement.className === "content20") {
@@ -1840,7 +1840,7 @@ function question19() {
                 19
             );
 
-            addCorrectAnswerQuestion19();
+            // addCorrectAnswerQuestion19();
         }
     } else {
         highlightUnselectedBlocks(1, 19, numbers19);
