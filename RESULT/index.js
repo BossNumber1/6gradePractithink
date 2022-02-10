@@ -1515,6 +1515,79 @@ function question9() {
 
 // 10 QUESTION
 
+let selectBtn10 = "",
+    nameSelectedBtn10 = "";
+
+document.getElementById("firstBtn10").onclick = function () {
+    selectBtn10 = "right";
+    nameSelectedBtn10 = "firstBtn10";
+
+    commonForSelectBtn("firstBtn10");
+    commonForNoselectedBtn(["secondBtn10", "thirdBtn10", "fourthBtn10"]);
+};
+
+document.getElementById("secondBtn10").onclick = function () {
+    selectBtn10 = "wrong";
+    nameSelectedBtn10 = "secondBtn10";
+
+    commonForSelectBtn("secondBtn10");
+    commonForNoselectedBtn(["firstBtn10", "thirdBtn10", "fourthBtn10"]);
+};
+
+document.getElementById("thirdBtn10").onclick = function () {
+    selectBtn10 = "wrong";
+    nameSelectedBtn10 = "thirdBtn10";
+
+    commonForSelectBtn("thirdBtn10");
+    commonForNoselectedBtn(["firstBtn10", "secondBtn10", "fourthBtn10"]);
+};
+
+document.getElementById("fourthBtn10").onclick = function () {
+    selectBtn10 = "wrong";
+    nameSelectedBtn10 = "fourthBtn10";
+
+    commonForSelectBtn("fourthBtn10");
+    commonForNoselectedBtn(["firstBtn10", "secondBtn10", "thirdBtn10"]);
+};
+
+function question10() {
+    if (selectBtn10 !== "") {
+        succerror(
+            document.getElementById(nameSelectedBtn10),
+            selectBtn10 === "wrong"
+        );
+
+        // выносим общий статус к номеру вопроса
+
+        if (selectBtn10 === "right") {
+            addImage(
+                "success",
+                document.getElementsByClassName("question10"),
+                "app10",
+                10
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question10"),
+                "app10",
+                10
+            );
+
+            addCorrectAnswerQuestion10();
+        }
+    } else {
+        document.getElementById("firstBtn10").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("secondBtn10").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("thirdBtn10").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("fourthBtn10").style.border =
+            "2px solid #FFB47D";
+    }
+}
+
 // 11 QUESTION
 
 let numbers11 = {
@@ -2114,7 +2187,7 @@ document.getElementById("submit").onclick = function () {
     question7();
     question8();
     question9();
-    // question10();
+    question10();
     question11();
     question12();
     question13();
