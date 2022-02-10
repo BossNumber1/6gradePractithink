@@ -2094,6 +2094,133 @@ function question22() {
     }
 }
 
+// 23 QUESTION
+
+let selectedButton23 = {
+    firstBtn23: "",
+    secondBtn23: "",
+    thirdBtn23: "",
+    fourthBtn23: "",
+    fifthBtn23: "",
+};
+
+document.getElementById("firstBtn23").onclick = function () {
+    commonForSelectBtn("firstBtn23");
+
+    selectedButton23.firstBtn23 = "right";
+};
+
+document.getElementById("secondBtn23").onclick = function () {
+    commonForSelectBtn("secondBtn23");
+
+    selectedButton23.secondBtn23 = "right";
+};
+
+document.getElementById("thirdBtn23").onclick = function () {
+    commonForSelectBtn("thirdBtn23");
+
+    selectedButton23.thirdBtn23 = "right";
+};
+
+document.getElementById("fourthBtn23").onclick = function () {
+    commonForSelectBtn("fourthBtn23");
+
+    selectedButton23.fourthBtn23 = "right";
+};
+
+document.getElementById("fifthBtn23").onclick = function () {
+    commonForSelectBtn("fifthBtn23");
+
+    selectedButton23.fifthBtn23 = "right";
+};
+
+function question23() {
+    let selectedButtons = [],
+        namesSelectedButtons = [],
+        isTheArrayEmpty = 0;
+
+    for (let key in selectedButton23) {
+        if (selectedButton23[key] !== "") {
+            selectedButtons.push(selectedButton23[key]);
+            namesSelectedButtons.push(key);
+            isTheArrayEmpty++;
+        }
+    }
+
+    if (isTheArrayEmpty > 0) {
+        namesSelectedButtons.map((el, index) => {
+            succerror(
+                document.getElementById(el),
+                selectedButtons[index] === "wrong"
+            );
+        });
+
+        // выносим общий статус к номеру вопроса
+
+        if (
+            selectedButton23.firstBtn23 !== "" &&
+            selectedButton23.secondBtn23 !== "" &&
+            selectedButton23.thirdBtn23 !== "" &&
+            selectedButton23.fourthBtn23 !== "" &&
+            selectedButton23.fifthBtn23 !== ""
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question23"),
+                "app23",
+                23
+            );
+        } else {
+            // подсветим невыбранные блоки
+            if (selectedButton23.firstBtn23 === "") {
+                document.getElementById("firstBtn23").style.border =
+                    "2px solid #FFB47D";
+            }
+
+            if (selectedButton23.secondBtn23 === "") {
+                document.getElementById("secondBtn23").style.border =
+                    "2px solid #FFB47D";
+            }
+
+            if (selectedButton23.thirdBtn23 === "") {
+                document.getElementById("thirdBtn23").style.border =
+                    "2px solid #FFB47D";
+            }
+
+            if (selectedButton23.fourthBtn23 === "") {
+                document.getElementById("fourthBtn23").style.border =
+                    "2px solid #FFB47D";
+            }
+
+            if (selectedButton23.fifthBtn23 === "") {
+                document.getElementById("fifthBtn23").style.border =
+                    "2px solid #FFB47D";
+            }
+
+            // придадим статуса
+            addImage(
+                "failure",
+                document.getElementsByClassName("question23"),
+                "app23",
+                23
+            );
+
+            addCorrectAnswerQuestion23();
+        }
+    } else {
+        document.getElementById("firstBtn23").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("secondBtn23").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("thirdBtn23").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("fourthBtn23").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("fifthBtn23").style.border =
+            "2px solid #FFB47D";
+    }
+}
+
 // 24 QUESTION
 
 let numbers24 = {
@@ -2220,7 +2347,7 @@ document.getElementById("submit").onclick = function () {
     question20();
     question21();
     question22();
-    // question23();
+    question23();
     question24();
     question25();
 };
