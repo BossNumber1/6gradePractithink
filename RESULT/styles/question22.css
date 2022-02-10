@@ -33,9 +33,36 @@
 /* content styles */
 
 .content22 {
-    top: 100px;
+    top: 60px;
     left: calc(50% - 232.55px / 2);
     width: 232.55px;
     height: 293.15px;
-    border: 1px solid;
+}
+
+.topRow22 {
+    height: 232.55px;
+    margin-bottom: 28px;
+}
+
+.bottomRow22 {
+    left: calc(50% - 101px / 2);
+    width: 101px;
+    height: 30.15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content22 input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    width: 56.85px;
+    height: 30px;
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
 }
