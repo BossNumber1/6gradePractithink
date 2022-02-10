@@ -379,6 +379,56 @@ function addCorrectAnswerQuestion20() {
     );
 }
 
+function addCorrectAnswerQuestion21() {
+    document.getElementsByClassName("app21")[0].style.height = "500px";
+    addCorrectAnswer(
+        "correctAnswer21",
+        "21que",
+        "app21",
+        "contentCorrectAnswer21"
+    );
+}
+
+function addCorrectAnswerQuestion22() {
+    document.getElementsByClassName("app22")[0].style.height = "900px";
+    addCorrectAnswer(
+        "correctAnswer22",
+        "22que",
+        "app22",
+        "contentCorrectAnswer22"
+    );
+}
+
+function addCorrectAnswerQuestion23() {
+    document.getElementsByClassName("app23")[0].style.height = "900px";
+    addCorrectAnswer(
+        "correctAnswer23",
+        "23que",
+        "app23",
+        "contentCorrectAnswer23"
+    );
+}
+
+function addCorrectAnswerQuestion24() {
+    document.getElementsByClassName("app24")[0].style.height = "900px";
+    addCorrectAnswer(
+        "correctAnswer24",
+        "24que",
+        "app24",
+        "contentCorrectAnswer24"
+    );
+}
+
+function addCorrectAnswerQuestion25() {
+    document.getElementsByClassName("app25")[0].style.height = "900px";
+    addCorrectAnswer(
+        "correctAnswer25",
+        "25que",
+        "app25",
+        "contentCorrectAnswer25"
+    );
+}
+
 // --------------------------------------------------------------------- validation of input fields ----------------------------------------------
 
 // -------------------------------------------------------------common function---------------------------------------------------
@@ -2109,6 +2159,7 @@ document.getElementById("submit").onclick = function () {
     question20();
     addCorrectAnswerQuestion20();
     question21();
+    addCorrectAnswerQuestion21();
     question22();
     // question23();
     question24();

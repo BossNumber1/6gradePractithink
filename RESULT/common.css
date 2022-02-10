@@ -146,7 +146,12 @@ body {
 .correctAnswer17,
 .correctAnswer18,
 .correctAnswer19,
-.correctAnswer20 {
+.correctAnswer20,
+.correctAnswer21,
+.correctAnswer22,
+.correctAnswer23,
+.correctAnswer24,
+.correctAnswer25 {
     left: calc(50% - 450px / 2);
     width: 450px;
     height: 94px;
@@ -211,6 +216,10 @@ body {
     top: 200px;
 }
 
+.correctAnswer21 {
+    top: 180px;
+}
+
 .correctAnswer15 {
     top: 220px;
 }
@@ -262,7 +271,12 @@ body {
 .contentCorrectAnswer17,
 .contentCorrectAnswer18,
 .contentCorrectAnswer19,
-.contentCorrectAnswer20 {
+.contentCorrectAnswer20,
+.contentCorrectAnswer21,
+.contentCorrectAnswer22,
+.contentCorrectAnswer23,
+.contentCorrectAnswer24,
+.contentCorrectAnswer25 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -316,6 +330,10 @@ body {
 .contentCorrectAnswer14,
 .contentCorrectAnswer19 {
     top: 120px;
+}
+
+.contentCorrectAnswer21 {
+    top: 50px;
 }
 
 .contentCorrectAnswer5 {
