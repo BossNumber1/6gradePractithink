@@ -1389,50 +1389,35 @@ function question6() {
 
 // 7 QUESTION
 
-let numbers7 = {
-    firstNumber: "",
-    secondNumber: "",
-    thirdNumber: "",
-    fourthNumber: "",
+let selectBtn7 = "",
+    nameSelectedBtn7 = "";
+
+document.getElementById("firstBtn7").onclick = function () {
+    selectBtn7 = "wrong";
+    nameSelectedBtn7 = "firstBtn7";
+
+    commonForSelectBtn("firstBtn7");
+    commonForNoselectedBtn(["secondBtn7"]);
 };
 
-// gettingDataFromFields(4, [0.15, 0.16, 0.42, 0.4], 7, numbers7);
+document.getElementById("secondBtn7").onclick = function () {
+    selectBtn7 = "right";
+    nameSelectedBtn7 = "secondBtn7";
+
+    commonForSelectBtn("secondBtn7");
+    commonForNoselectedBtn(["firstBtn7"]);
+};
 
 function question7() {
-    if (
-        numbers7.firstNumber != "" &&
-        numbers7.secondNumber != "" &&
-        numbers7.thirdNumber != "" &&
-        numbers7.fourthNumber != ""
-    ) {
+    if (selectBtn7 !== "") {
         succerror(
-            document.getElementById("firstNumber7"),
-            numbers7.firstNumber === "wrong"
-        );
-
-        succerror(
-            document.getElementById("secondNumber7"),
-            numbers7.secondNumber === "wrong"
-        );
-
-        succerror(
-            document.getElementById("thirdNumber7"),
-            numbers7.thirdNumber === "wrong"
-        );
-
-        succerror(
-            document.getElementById("fourthNumber7"),
-            numbers7.fourthNumber === "wrong"
+            document.getElementById(nameSelectedBtn7),
+            selectBtn7 === "wrong"
         );
 
         // выносим общий статус к номеру вопроса
 
-        if (
-            numbers7.firstNumber === "right" &&
-            numbers7.secondNumber === "right" &&
-            numbers7.thirdNumber === "right" &&
-            numbers7.fourthNumber === "right"
-        ) {
+        if (selectBtn7 === "right") {
             addImage(
                 "success",
                 document.getElementsByClassName("question7"),
@@ -1450,7 +1435,9 @@ function question7() {
             addCorrectAnswerQuestion7();
         }
     } else {
-        highlightUnselectedBlocks(4, 7, numbers7);
+        document.getElementById("firstBtn7").style.border = "2px solid #FFB47D";
+        document.getElementById("secondBtn7").style.border =
+            "2px solid #FFB47D";
     }
 }
 
@@ -2124,7 +2111,7 @@ document.getElementById("submit").onclick = function () {
     // question4();
     question5();
     question6();
-    // question7();
+    question7();
     question8();
     question9();
     // question10();
