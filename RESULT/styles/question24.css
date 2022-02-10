@@ -37,5 +37,47 @@
     left: calc(50% - 472px / 2);
     width: 472px;
     height: 288px;
-    border: 1px solid;
+}
+
+.topRow24 {
+    left: calc(50% - 277px / 2);
+    width: 277px;
+    height: 187px;
+    margin-bottom: 70px;
+}
+
+.bottomRow24 {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.firstExpression24,
+.secondExpression24 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.content24 input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    width: 70px;
+    height: 30px;
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 5px;
+}
+
+.bottomRow24:not(input) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
 }
