@@ -479,10 +479,10 @@ function addMiniIcon(elem, status) {
         objDiv.style.marginRight = "130px";
     }
 
-    if (
-        elem.parentElement.parentElement.parentElement.className === "content13"
-    ) {
-        objDiv.style.marginTop = "-25px";
+    if (elem.parentElement.parentElement.className === "content13") {
+        objDiv.style.marginTop = "-55px";
+        objDiv.style.marginLeft =
+            elem.offsetLeft + widthAdjacentElement / 2 - 57 + "px";
     }
 
     if (
@@ -1559,41 +1559,17 @@ function question12() {
 
 let numbers13 = {
     firstNumber: "",
-    secondNumber: "",
-    thirdNumber: "",
-    fourthNumber: "",
-    fifthNumber: "",
-    sixthNumber: "",
 };
 
-// gettingDataFromFields(
-//     6,
-//     ["17/12", "8/7", "2", "2", "11/8", "11/8"],
-//     13,
-//     numbers13
-// );
+gettingDataFromFields(1, ["2/3"], 13, numbers13);
 
 function question13() {
-    if (
-        numbers13.firstNumber !== "" &&
-        numbers13.secondNumber !== "" &&
-        numbers13.thirdNumber !== "" &&
-        numbers13.fourthNumber !== "" &&
-        numbers13.fifthNumber !== "" &&
-        numbers13.sixthNumber !== ""
-    ) {
-        succerrorAndCreateMiniIcon(6, 13, numbers13);
+    if (numbers13.firstNumber != "") {
+        succerrorAndCreateMiniIcon(1, 13, numbers13);
 
         // выносим общий статус к номеру вопроса
 
-        if (
-            numbers13.firstNumber === "right" &&
-            numbers13.secondNumber === "right" &&
-            numbers13.thirdNumber === "right" &&
-            numbers13.fourthNumber === "right" &&
-            numbers13.fifthNumber === "right" &&
-            numbers13.sixthNumber === "right"
-        ) {
+        if (numbers13.firstNumber === "right") {
             addImage(
                 "success",
                 document.getElementsByClassName("question13"),
@@ -1608,10 +1584,10 @@ function question13() {
                 13
             );
 
-            addCorrectAnswerQuestion13();
+            // addCorrectAnswerQuestion13();
         }
     } else {
-        highlightUnselectedBlocks(6, 13, numbers13);
+        highlightUnselectedBlocks(1, 13, numbers13);
     }
 }
 
@@ -1945,7 +1921,7 @@ document.getElementById("submit").onclick = function () {
     // question10();
     // question11();
     question12();
-    // question13();
+    question13();
     // question14();
     // question15();
     // question16();
