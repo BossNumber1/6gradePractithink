@@ -518,6 +518,13 @@ function addMiniIcon(elem, status) {
     }
 
     if (
+        elem.parentElement.parentElement.parentElement.className === "content24"
+    ) {
+        objDiv.style.marginLeft =
+            elem.offsetLeft + widthAdjacentElement / 2 - 75 + "px";
+    }
+
+    if (
         elem.parentElement.parentElement.parentElement.className === "content8"
     ) {
         objDiv.style.marginTop = "-23px";
@@ -1961,6 +1968,46 @@ function question22() {
     }
 }
 
+// 24 QUESTION
+
+let numbers24 = {
+    firstNumber: "",
+    secondNumber: "",
+};
+
+gettingDataFromFields(2, ["1/8", "6/4"], 24, numbers24);
+
+function question24() {
+    if (numbers24.firstNumber != "" && numbers24.secondNumber != "") {
+        succerrorAndCreateMiniIcon(2, 24, numbers24);
+
+        // выносим общий статус к номеру вопроса
+
+        if (
+            numbers24.firstNumber === "right" &&
+            numbers24.secondNumber === "right"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question24"),
+                "app24",
+                24
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question24"),
+                "app24",
+                24
+            );
+
+            // addCorrectAnswerQuestion24();
+        }
+    } else {
+        highlightUnselectedBlocks(2, 24, numbers24);
+    }
+}
+
 // RESULT
 
 document.getElementById("submit").onclick = function () {
@@ -1987,6 +2034,6 @@ document.getElementById("submit").onclick = function () {
     question21();
     question22();
     // question23();
-    // question24();
+    question24();
     // question25();
 };
