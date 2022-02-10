@@ -162,11 +162,7 @@ body {
 }
 
 .correctAnswer23 {
-    top: 120px;
-}
-
-.correctAnswer26 {
-    top: 200px;
+    top: 160px;
 }
 
 .correctAnswer18 {
@@ -346,6 +342,10 @@ body {
 
 .contentCorrectAnswer22 {
     top: 20px;
+}
+
+.contentCorrectAnswer23 {
+    top: 40px;
 }
 
 .contentCorrectAnswer24 {
