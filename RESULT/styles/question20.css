@@ -37,5 +37,37 @@
     left: calc(50% - 213px / 2);
     width: 213px;
     height: 396px;
-    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rightColumn20 {
+    width: 143px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.rightColumn20 input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    width: 104px;
+    height: 45px;
+    background: #ffffff;
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.rightColumn20:not(input) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
 }
