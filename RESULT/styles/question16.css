@@ -33,9 +33,46 @@
 /* content styles */
 
 .content16 {
-    top: 100px;
+    top: 130px;
     left: calc(50% - 701px / 2);
     width: 701px;
     height: 154px;
-    border: 1px solid;
+}
+
+.content12 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+#firstNumber16,
+#secondNumber16,
+#thirdNumber16 {
+    top: 123px;
+    position: absolute;
+    border-radius: 5px;
+    border: 1px solid #2f2f2f;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    width: 58px;
+    height: 32px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+#firstNumber16 {
+    left: 169px;
+}
+
+#secondNumber16 {
+    left: 269px;
+}
+
+#thirdNumber16 {
+    left: 463px;
 }
