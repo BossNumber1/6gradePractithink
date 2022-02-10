@@ -900,7 +900,7 @@ let numbers1 = {
     fourthNumber: "",
 };
 
-gettingDataFromFields(4, [5054, 7014, 2971, 7716], 1, numbers1);
+gettingDataFromFields(4, ["-0.6", "3.1", "-5", "8.6"], 1, numbers1);
 
 function question1() {
     if (
@@ -951,7 +951,7 @@ function question1() {
                 1
             );
 
-            addCorrectAnswerQuestion1();
+            // addCorrectAnswerQuestion1();
         }
     } else {
         highlightUnselectedBlocks(4, 1, numbers1);
@@ -964,7 +964,7 @@ let numbers2 = {
     firstNumber: "",
 };
 
-gettingDataFromFields(1, [100], 2, numbers2);
+// gettingDataFromFields(1, [100], 2, numbers2);
 
 function question2() {
     if (numbers2.firstNumber != "") {
@@ -1241,7 +1241,7 @@ let numbers5 = {
     firstNumber: "",
 };
 
-gettingDataFromFields(1, [3], 5, numbers5);
+// gettingDataFromFields(1, [3], 5, numbers5);
 
 function question5() {
     if (numbers5.firstNumber != "") {
@@ -1277,7 +1277,7 @@ let numbers6 = {
     firstNumber: "",
 };
 
-gettingDataFromFields(1, [8], 6, numbers6);
+// gettingDataFromFields(1, [8], 6, numbers6);
 
 function question6() {
     if (numbers6.firstNumber != "") {
@@ -1316,7 +1316,7 @@ let numbers7 = {
     fourthNumber: "",
 };
 
-gettingDataFromFields(4, [0.15, 0.16, 0.42, 0.4], 7, numbers7);
+// gettingDataFromFields(4, [0.15, 0.16, 0.42, 0.4], 7, numbers7);
 
 function question7() {
     if (
@@ -1385,12 +1385,12 @@ let numbers8 = {
     sixthNumber: "",
 };
 
-gettingDataFromFields(
-    6,
-    ["1/6", "1/6", "2/15", "1/8", "1/8", "1/9"],
-    8,
-    numbers8
-);
+// gettingDataFromFields(
+//     6,
+//     ["1/6", "1/6", "2/15", "1/8", "1/8", "1/9"],
+//     8,
+//     numbers8
+// );
 
 function question8() {
     if (
@@ -1443,7 +1443,7 @@ let numbers9 = {
     fourthNumber: "",
 };
 
-gettingDataFromFields(4, [2, 3, 4, 5], 9, numbers9);
+// gettingDataFromFields(4, [2, 3, 4, 5], 9, numbers9);
 
 function question9() {
     if (
@@ -1485,134 +1485,6 @@ function question9() {
 
 // 10 QUESTION
 
-const rotationFunction = new Propeller(
-    document.getElementsByClassName("leftArrow")[0],
-    {
-        inertia: 0,
-    }
-);
-
-dragElement(document.getElementsByClassName("leftArrow")[0]);
-
-function dragElement(element) {
-    let pos1 = 0,
-        pos2 = 0,
-        pos3 = 0,
-        pos4 = 0;
-
-    element.onmousedown = dragMouseDown;
-
-    function dragMouseDown(e) {
-        e = e || window.event;
-        // get the mouse cursor position at startup:
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        document.onmousemove = elementDrag;
-    }
-
-    function elementDrag(e) {
-        e = e || window.event;
-        // calculate the new cursor position:
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        // set the element's new position:
-        element.style.top = element.offsetTop - pos2 + "px";
-        element.style.left = element.offsetLeft - pos1 + "px";
-    }
-
-    function closeDragElement() {
-        document.onmouseup = null;
-        document.onmousemove = null;
-    }
-}
-
-document
-    .getElementsByClassName("leftArrow")[0]
-    .addEventListener("mousedown", (e) => {
-        if (
-            (e.target.className !== "leftEdge" ||
-                e.target.className !== "rightEdge") &&
-            e.target.className === "imgRuler"
-        ) {
-            rotationFunction.stop();
-            dragElement(document.getElementsByClassName("leftArrow")[0]);
-        }
-
-        if (
-            (e.target.className === "leftEdge" ||
-                e.target.className === "rightEdge") &&
-            e.target.className !== "imgRuler"
-        ) {
-            rotationFunction.onRotated(e);
-        }
-    });
-
-// функция для определения угла наклона элемента
-function getDegreeElementByClass(class_element) {
-    let element = document.getElementsByClassName(class_element)[0];
-    let style = window.getComputedStyle(element, null);
-    // получаем значение стилей
-    let valueStyle =
-        style.getPropertyValue("-webkit-transform") ||
-        style.getPropertyValue("-moz-transform") ||
-        style.getPropertyValue("-ms-transform") ||
-        style.getPropertyValue("-o-transform") ||
-        style.getPropertyValue("transform");
-    // если стилей нет, то угол 0 градусов
-    if (valueStyle == "none") return 0;
-    // разбираем полученное значение
-    console.log(valueStyle);
-    let values = valueStyle.split("(")[1];
-    values = values.split(")")[0];
-    values = values.split(",");
-    // получаем синус и косинус
-    let cos = values[0];
-    let sin = values[1];
-    // вычисляем угол
-    let degree = Math.round(Math.asin(sin) * (180 / Math.PI));
-    if (cos < 0) {
-        addDegree = 90 - Math.round(Math.asin(sin) * (180 / Math.PI));
-        degree = 90 + addDegree;
-    }
-    if (degree < 0) {
-        degree = 360 + degree;
-    }
-    return degree;
-}
-
-function question10() {
-    let degree = getDegreeElementByClass("leftArrow");
-
-    if (degree !== 0) {
-        if (degree < 30 && degree > 28) {
-            addImage(
-                "success",
-                document.getElementsByClassName("question10"),
-                "app10",
-                10
-            );
-        } else {
-            document.getElementsByClassName("content10")[0].style.border =
-                "1px solid #ED7777";
-
-            addImage(
-                "failure",
-                document.getElementsByClassName("question10"),
-                "app10",
-                10
-            );
-
-            addCorrectAnswerQuestion10();
-        }
-    } else {
-        document.getElementsByClassName("content10")[0].style.border =
-            "1px solid #FFB47D";
-    }
-}
-
 // 11 QUESTION
 
 let numbers11 = {
@@ -1624,12 +1496,12 @@ let numbers11 = {
     sixthNumber: "",
 };
 
-gettingDataFromFields(
-    6,
-    ["1", "20/21", "3/10", "14/15", "8/5", "5/6"],
-    11,
-    numbers11
-);
+// gettingDataFromFields(
+//     6,
+//     ["1", "20/21", "3/10", "14/15", "8/5", "5/6"],
+//     11,
+//     numbers11
+// );
 
 function question11() {
     if (
@@ -1779,12 +1651,12 @@ let numbers13 = {
     sixthNumber: "",
 };
 
-gettingDataFromFields(
-    6,
-    ["17/12", "8/7", "2", "2", "11/8", "11/8"],
-    13,
-    numbers13
-);
+// gettingDataFromFields(
+//     6,
+//     ["17/12", "8/7", "2", "2", "11/8", "11/8"],
+//     13,
+//     numbers13
+// );
 
 function question13() {
     if (
@@ -1834,7 +1706,7 @@ let numbers14 = {
     firstNumber: "",
 };
 
-gettingDataFromFields(1, [0.52], 14, numbers14);
+// gettingDataFromFields(1, [0.52], 14, numbers14);
 
 function question14() {
     if (numbers14.firstNumber != "") {
@@ -1873,7 +1745,7 @@ let numbers15 = {
     fourthNumber: "",
 };
 
-gettingDataFromFields(4, [5, 6, 7, 11], 15, numbers15);
+// gettingDataFromFields(4, [5, 6, 7, 11], 15, numbers15);
 
 function question15() {
     if (
@@ -1939,7 +1811,7 @@ let numbers16 = {
     thirdNumber: "",
 };
 
-gettingDataFromFields(3, [6.6, 292, 122.7], 16, numbers16);
+// gettingDataFromFields(3, [6.6, 292, 122.7], 16, numbers16);
 
 function question16() {
     if (
@@ -2021,7 +1893,7 @@ let numbers18 = {
     fourthNumber: "",
 };
 
-gettingDataFromFields(4, [7, 6, 3, 7], 18, numbers18);
+// gettingDataFromFields(4, [7, 6, 3, 7], 18, numbers18);
 
 function question18() {
     if (
@@ -2067,7 +1939,7 @@ let numbers19 = {
     firstNumber: "",
 };
 
-gettingDataFromFields(1, [42.1], 19, numbers19);
+// gettingDataFromFields(1, [42.1], 19, numbers19);
 
 function question19() {
     if (numbers19.firstNumber != "") {
@@ -2105,7 +1977,7 @@ let numbers20 = {
     thirdNumber: "",
 };
 
-gettingDataFromFields(3, [262, 7701, 115], 20, numbers20);
+// gettingDataFromFields(3, [262, 7701, 115], 20, numbers20);
 
 function question20() {
     if (
@@ -2147,23 +2019,23 @@ function question20() {
 
 document.getElementById("submit").onclick = function () {
     question1();
-    question2();
-    question3();
-    question4();
-    question5();
-    question6();
-    question7();
-    question8();
-    question9();
-    question10();
-    question11();
-    question12();
-    question13();
-    question14();
-    question15();
-    question16();
-    question17();
-    question18();
-    question19();
-    question20();
+    // question2();
+    // question3();
+    // question4();
+    // question5();
+    // question6();
+    // question7();
+    // question8();
+    // question9();
+    // question10();
+    // question11();
+    // question12();
+    // question13();
+    // question14();
+    // question15();
+    // question16();
+    // question17();
+    // question18();
+    // question19();
+    // question20();
 };
