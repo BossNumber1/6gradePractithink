@@ -978,10 +978,10 @@ function question2() {
         nameChild4 !== "emptyPlace2"
     ) {
         if (
-            nameChild1 === "triangle" &&
-            nameChild2 === "trapezium" &&
-            nameChild3 === "pentagon" &&
-            nameChild4 === "hexagon"
+            (nameChild1 === "secondBtn2" || nameChild1 === "fourthBtn2") &&
+            (nameChild2 === "firstBtn2" || nameChild2 === "thirdBtn2") &&
+            (nameChild3 === "fourthBtn2" || nameChild3 === "secondBtn2") &&
+            (nameChild4 === "thirdBtn2" || nameChild4 === "firstBtn2")
         ) {
             addImage(
                 "success",
@@ -990,20 +990,24 @@ function question2() {
                 2
             );
         } else {
-            if (nameChild1 !== "triangle") {
-                necessaryPlace1.style.border = "2px solid #ED7777";
+            if (nameChild1 !== "secondBtn2" && nameChild1 !== "fourthBtn2") {
+                necessaryPlace1.children[0].style.border = "2px solid #ED7777";
+                necessaryPlace1.children[0].style.borderRadius = "5px";
             }
 
-            if (nameChild2 !== "trapezium") {
-                necessaryPlace2.style.border = "2px solid #ED7777";
+            if (nameChild2 !== "firstBtn2" && nameChild2 !== "thirdBtn2") {
+                necessaryPlace2.children[0].style.border = "2px solid #ED7777";
+                necessaryPlace2.children[0].style.borderRadius = "5px";
             }
 
-            if (nameChild3 !== "pentagon") {
-                necessaryPlace3.style.border = "2px solid #ED7777";
+            if (nameChild3 !== "fourthBtn2" && nameChild3 !== "secondBtn2") {
+                necessaryPlace3.children[0].style.border = "2px solid #ED7777";
+                necessaryPlace3.children[0].style.borderRadius = "5px";
             }
 
-            if (nameChild4 !== "hexagon") {
-                necessaryPlace4.style.border = "2px solid #ED7777";
+            if (nameChild4 !== "thirdBtn2" && nameChild4 !== "firstBtn2") {
+                necessaryPlace4.children[0].style.border = "2px solid #ED7777";
+                necessaryPlace4.children[0].style.borderRadius = "5px";
             }
 
             addImage(
@@ -1017,19 +1021,23 @@ function question2() {
         }
     } else {
         if (nameChild1 === "emptyPlace2") {
-            necessaryPlace1.style.border = "2px solid #FFB47D";
+            necessaryPlace1.children[0].style.border = "2px solid #FFB47D";
+            necessaryPlace1.children[0].style.borderRadius = "5px";
         }
 
         if (nameChild2 === "emptyPlace2") {
-            necessaryPlace2.style.border = "2px solid #FFB47D";
+            necessaryPlace2.children[0].style.border = "2px solid #FFB47D";
+            necessaryPlace2.children[0].style.borderRadius = "5px";
         }
 
         if (nameChild3 === "emptyPlace2") {
-            necessaryPlace3.style.border = "2px solid #FFB47D";
+            necessaryPlace3.children[0].style.border = "2px solid #FFB47D";
+            necessaryPlace3.children[0].style.borderRadius = "5px";
         }
 
         if (nameChild4 === "emptyPlace2") {
-            necessaryPlace4.style.border = "2px solid #FFB47D";
+            necessaryPlace4.children[0].style.border = "2px solid #FFB47D";
+            necessaryPlace4.children[0].style.borderRadius = "5px";
         }
     }
 }
@@ -1041,7 +1049,7 @@ function question3() {
     let nameChild1 = necessaryPlace1.children[0].id.slice(0, -1);
 
     if (nameChild1 !== "emptyPlace3") {
-        if (nameChild1 === "triangle") {
+        if (nameChild1 === "firstBtn3") {
             addImage(
                 "success",
                 document.getElementsByClassName("question3"),
@@ -1049,8 +1057,9 @@ function question3() {
                 3
             );
         } else {
-            if (nameChild1 !== "triangle") {
-                necessaryPlace1.style.border = "2px solid #ED7777";
+            if (nameChild1 !== "firstBtn3") {
+                necessaryPlace1.children[0].style.border = "2px solid #ED7777";
+                necessaryPlace1.children[0].style.borderRadius = "5px";
             }
 
             addImage(
@@ -1064,7 +1073,8 @@ function question3() {
         }
     } else {
         if (nameChild1 === "emptyPlace3") {
-            necessaryPlace1.style.border = "2px solid #FFB47D";
+            necessaryPlace1.children[0].style.border = "2px solid #FFB47D";
+            necessaryPlace1.children[0].style.borderRadius = "5px";
         }
     }
 }
@@ -1095,12 +1105,12 @@ function question4() {
         nameChild6 !== "emptyPlace4"
     ) {
         if (
-            nameChild1 === "triangle" &&
-            nameChild2 === "trapezium" &&
-            nameChild3 === "pentagon" &&
-            nameChild4 === "hexagon" &&
-            nameChild5 === "pentagon" &&
-            nameChild6 === "hexagon"
+            nameChild1 === "fourthBtn4" &&
+            nameChild2 === "secondBtn4" &&
+            nameChild3 === "fifthBtn4" &&
+            nameChild4 === "thirdBtn4" &&
+            nameChild5 === "firstBtn4" &&
+            nameChild6 === "sixthBtn4"
         ) {
             addImage(
                 "success",
@@ -1109,28 +1119,34 @@ function question4() {
                 4
             );
         } else {
-            if (nameChild1 !== "triangle") {
-                necessaryPlace1.style.border = "2px solid #ED7777";
+            if (nameChild1 !== "fourthBtn4") {
+                necessaryPlace1.children[0].style.border = "2px solid #ED7777";
+                necessaryPlace1.children[0].style.borderRadius = "5px";
             }
 
-            if (nameChild2 !== "trapezium") {
-                necessaryPlace2.style.border = "2px solid #ED7777";
+            if (nameChild2 !== "secondBtn4") {
+                necessaryPlace2.children[0].style.border = "2px solid #ED7777";
+                necessaryPlace2.children[0].style.borderRadius = "5px";
             }
 
-            if (nameChild3 !== "pentagon") {
-                necessaryPlace3.style.border = "2px solid #ED7777";
+            if (nameChild3 !== "fifthBtn4") {
+                necessaryPlace3.children[0].style.border = "2px solid #ED7777";
+                necessaryPlace3.children[0].style.borderRadius = "5px";
             }
 
-            if (nameChild4 !== "hexagon") {
-                necessaryPlace4.style.border = "2px solid #ED7777";
+            if (nameChild4 !== "thirdBtn4") {
+                necessaryPlace4.children[0].style.border = "2px solid #ED7777";
+                necessaryPlace4.children[0].style.borderRadius = "5px";
             }
 
-            if (nameChild5 !== "hexagon") {
-                necessaryPlace5.style.border = "2px solid #ED7777";
+            if (nameChild5 !== "firstBtn4") {
+                necessaryPlace5.children[0].style.border = "2px solid #ED7777";
+                necessaryPlace5.children[0].style.borderRadius = "5px";
             }
 
-            if (nameChild6 !== "hexagon") {
-                necessaryPlace6.style.border = "2px solid #ED7777";
+            if (nameChild6 !== "sixthBtn4") {
+                necessaryPlace6.children[0].style.border = "2px solid #ED7777";
+                necessaryPlace6.children[0].style.borderRadius = "5px";
             }
 
             addImage(
@@ -1144,27 +1160,33 @@ function question4() {
         }
     } else {
         if (nameChild1 === "emptyPlace4") {
-            necessaryPlace1.style.border = "2px solid #FFB47D";
+            necessaryPlace1.children[0].style.border = "2px solid #FFB47D";
+            necessaryPlace1.children[0].style.borderRadius = "5px";
         }
 
         if (nameChild2 === "emptyPlace4") {
-            necessaryPlace2.style.border = "2px solid #FFB47D";
+            necessaryPlace2.children[0].style.border = "2px solid #FFB47D";
+            necessaryPlace2.children[0].style.borderRadius = "5px";
         }
 
         if (nameChild3 === "emptyPlace4") {
-            necessaryPlace3.style.border = "2px solid #FFB47D";
+            necessaryPlace3.children[0].style.border = "2px solid #FFB47D";
+            necessaryPlace3.children[0].style.borderRadius = "5px";
         }
 
         if (nameChild4 === "emptyPlace4") {
-            necessaryPlace4.style.border = "2px solid #FFB47D";
+            necessaryPlace4.children[0].style.border = "2px solid #FFB47D";
+            necessaryPlace4.children[0].style.borderRadius = "5px";
         }
 
         if (nameChild5 === "emptyPlace4") {
-            necessaryPlace5.style.border = "2px solid #FFB47D";
+            necessaryPlace5.children[0].style.border = "2px solid #FFB47D";
+            necessaryPlace5.children[0].style.borderRadius = "5px";
         }
 
         if (nameChild6 === "emptyPlace4") {
-            necessaryPlace6.style.border = "2px solid #FFB47D";
+            necessaryPlace6.children[0].style.border = "2px solid #FFB47D";
+            necessaryPlace6.children[0].style.borderRadius = "5px";
         }
     }
 }
