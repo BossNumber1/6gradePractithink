@@ -22,172 +22,115 @@ function allowDrop(e) {
     e.preventDefault();
 }
 
-// 3 QUESTION
+// 2 QUESTION
 
-function drag3(e) {
-    localStorage.setItem("idOrigin3question5class", e.target.id);
-    localStorage.setItem(
-        "textContent3question5class",
-        e.target.textContent.trim()
-    );
+function drag2(e) {
+    localStorage.setItem("idOrigin2question6class", e.target.id);
 }
 
-function drop3(e) {
-    // получаем текст и id взятого элемента
-    let idOrig = localStorage.getItem("idOrigin3question5class");
-    let textContent = localStorage.getItem("textContent3question5class");
+function drop2(e) {
+    // получаем имя и id взятого элемента
+    let idOrig = localStorage.getItem("idOrigin2question6class");
+    let nameObjectOrig = idOrig.slice(0, -1);
 
-    // получаем id, на который кладём элемент
+    // получаем имя и id, на который кладём элемент
     let currentId = e.target.id;
+    let nameObjectCurrent = currentId.slice(0, -1);
 
     // получаем объекты
     let orignalElement = document.getElementById(idOrig);
     let currentElement = document.getElementById(currentId);
 
-    // меняем блоки местами
-    currentElement.textContent = textContent;
-    currentElement.style.opacity = "1";
-    currentElement.style.color = "white";
-    currentElement.style.cursor = "grab";
-
-    orignalElement.textContent = "";
-    orignalElement.style.opacity = "0.3";
-    orignalElement.style.cursor = "default";
+    // меняем картинки местами
+    currentElement.src = "./pictures/2que/" + nameObjectOrig + ".svg";
+    orignalElement.src = "./pictures/2que/" + nameObjectCurrent + ".svg";
 
     // меняем id местами
     currentElement.id = idOrig;
     orignalElement.id = currentId;
+
+    // меняем фон при определённом условии
+    if (nameObjectCurrent === "emptyPlace") {
+        currentElement.parentElement.style.backgroundColor = "white";
+    }
+
+    // меняем вид курсора
+    currentElement.style.cursor = "grab";
+    orignalElement.style.cursor = "default";
+}
+
+// 3 QUESTION
+
+function drag3(e) {
+    localStorage.setItem("idOrigin3question6class", e.target.id);
+}
+
+function drop3(e) {
+    // получаем имя и id взятого элемента
+    let idOrig = localStorage.getItem("idOrigin3question6class");
+    let nameObjectOrig = idOrig.slice(0, -1);
+
+    // получаем имя и id, на который кладём элемент
+    let currentId = e.target.id;
+    let nameObjectCurrent = currentId.slice(0, -1);
+
+    // получаем объекты
+    let orignalElement = document.getElementById(idOrig);
+    let currentElement = document.getElementById(currentId);
+
+    // меняем картинки местами
+    currentElement.src = "./pictures/3que/" + nameObjectOrig + ".svg";
+    orignalElement.src = "./pictures/3que/" + nameObjectCurrent + ".svg";
+
+    // меняем id местами
+    currentElement.id = idOrig;
+    orignalElement.id = currentId;
+
+    // меняем фон при определённом условии
+    if (nameObjectCurrent === "emptyPlace") {
+        currentElement.parentElement.style.backgroundColor = "white";
+    }
+
+    // меняем вид курсора
+    currentElement.style.cursor = "grab";
+    orignalElement.style.cursor = "default";
 }
 
 // 4 QUESTION
 
 function drag4(e) {
-    localStorage.setItem("idOrigin4question5class", e.target.id);
+    localStorage.setItem("idOrigin4question6class", e.target.id);
 }
 
 function drop4(e) {
-    // получаем id, позицию и класс текущего
-    let idOrig = localStorage.getItem("idOrigin4question5class");
-    let idCurn = e.target.id;
-    let classCurn = e.target.parentElement.className;
-    let positionOrig = idOrig.slice(0, -1).slice(-1) - 1;
+    // получаем имя и id взятого элемента
+    let idOrig = localStorage.getItem("idOrigin4question6class");
+    let nameObjectOrig = idOrig.slice(0, -1);
 
-    // получаем объекты
-    let orgnElement = document.getElementById(idOrig);
-    let crntElement = document.getElementById(idCurn);
-
-    // копируем переносимый объект в новый
-    let copyObj = document.createElement("img");
-    copyObj.src = "./pictures/4que/" + idOrig.slice(0, -1) + ".svg";
-    copyObj.id = idOrig;
-    copyObj.style.cursor = "grab";
-    copyObj.style.marginTop = "10px";
-    copyObj.style.marginLeft = "10px";
-
-    // очищаем оригинал
-    orgnElement.src = "";
-    orgnElement.id = "";
-    orgnElement.parentElement.style.cursor = "default";
-
-    if (orgnElement.parentElement.id === "") {
-        // вставляем переносимый объект в корзину
-        crntElement.appendChild(copyObj);
-    }
-
-    // теперь делаем перенос обратно
-    if (
-        orgnElement.parentElement.id === "firstBasket4" ||
-        orgnElement.parentElement.id === "secondBasket4" ||
-        orgnElement.parentElement.id === "thirdBasket4"
-    ) {
-        let crnt =
-            document.getElementsByClassName(classCurn)[0].children[positionOrig]
-                .children[0];
-        crnt.id = idOrig;
-        crnt.src = "./pictures/4que/" + idOrig.slice(0, -1) + ".svg";
-        crnt.style.cursor = "grab";
-    }
-}
-
-// 12 QUESTION
-
-function drag12(e) {
-    localStorage.setItem("idOrigin12question5class", e.target.id);
-    localStorage.setItem(
-        "textContent12question5class",
-        e.target.textContent.trim()
-    );
-}
-
-function drop12(e) {
-    // получаем текст и id взятого элемента
-    let idOrig = localStorage.getItem("idOrigin12question5class");
-    let textContent = localStorage.getItem("textContent12question5class");
-
-    // получаем id, на который кладём элемент
+    // получаем имя и id, на который кладём элемент
     let currentId = e.target.id;
+    let nameObjectCurrent = currentId.slice(0, -1);
 
     // получаем объекты
     let orignalElement = document.getElementById(idOrig);
     let currentElement = document.getElementById(currentId);
 
-    // меняем блоки местами
-    currentElement.textContent = textContent;
-    currentElement.style.backgroundColor = "#369cb7";
-    currentElement.style.border = "1px solid #369cb7";
-    currentElement.style.color = "white";
-    currentElement.style.cursor = "grab";
-
-    currentElement.style.display = "flex";
-    currentElement.style.alignItems = "center";
-    currentElement.style.justifyContent = "center";
-
-    orignalElement.style.backgroundColor = "white";
-    orignalElement.style.border = "1px solid black";
-    orignalElement.textContent = "";
-    orignalElement.style.cursor = "default";
+    // меняем картинки местами
+    currentElement.src = "./pictures/4que/" + nameObjectOrig + ".svg";
+    orignalElement.src = "./pictures/4que/" + nameObjectCurrent + ".svg";
 
     // меняем id местами
     currentElement.id = idOrig;
     orignalElement.id = currentId;
-}
 
-// 17 QUESTION
+    // меняем фон при определённом условии
+    if (nameObjectCurrent === "emptyPlace") {
+        currentElement.parentElement.style.backgroundColor = "white";
+    }
 
-function drag17(e) {
-    localStorage.setItem("idOrigin17question5class", e.target.id);
-    localStorage.setItem(
-        "textContent17question5class",
-        e.target.textContent.trim()
-    );
-}
-
-function drop17(e) {
-    // получаем текст и id взятого элемента
-    let idOrig = localStorage.getItem("idOrigin17question5class");
-    let textContent = localStorage.getItem("textContent17question5class");
-
-    // получаем id, на который кладём элемент
-    let currentId = e.target.id;
-
-    // получаем объекты
-    let orignalElement = document.getElementById(idOrig);
-    let currentElement = document.getElementById(currentId);
-
-    // меняем блоки местами
-    currentElement.textContent = textContent;
-    currentElement.style.opacity = "1";
-    currentElement.style.color = "white";
+    // меняем вид курсора
     currentElement.style.cursor = "grab";
-    currentElement.style.backgroundColor = "#369cb7";
-
-    orignalElement.textContent = "";
-    orignalElement.style.opacity = "0.3";
     orignalElement.style.cursor = "default";
-
-    // меняем id местами
-    currentElement.id = idOrig;
-    orignalElement.id = currentId;
 }
 
 // ---------------------------------------------------------------------- SHOWING THE CORRECT ANSWER
@@ -962,7 +905,7 @@ function highlightingUnfillededBlocks(countId, numberQuestion) {
             }
         }
     }
-} // for 5, 10, 15 questions
+}
 
 // ----------------------------------------------------------------------------------------------------------------------------
 
@@ -1017,19 +960,29 @@ function question1() {
 
 // 2 QUESTION
 
-let numbers2 = {
-    firstNumber: "",
-};
-
-// gettingDataFromFields(1, [100], 2, numbers2);
-
 function question2() {
-    if (numbers2.firstNumber != "") {
-        succerrorAndCreateMiniIcon(1, 2, numbers2);
+    let necessaryPlace1 = document.getElementsByClassName("emptyPlace2")[0];
+    let necessaryPlace2 = document.getElementsByClassName("emptyPlace2")[1];
+    let necessaryPlace3 = document.getElementsByClassName("emptyPlace2")[2];
+    let necessaryPlace4 = document.getElementsByClassName("emptyPlace2")[3];
 
-        // выносим общий статус к номеру вопроса
+    let nameChild1 = necessaryPlace1.children[0].id.slice(0, -1);
+    let nameChild2 = necessaryPlace2.children[0].id.slice(0, -1);
+    let nameChild3 = necessaryPlace3.children[0].id.slice(0, -1);
+    let nameChild4 = necessaryPlace4.children[0].id.slice(0, -1);
 
-        if (numbers2.firstNumber === "right") {
+    if (
+        nameChild1 !== "emptyPlace2" &&
+        nameChild2 !== "emptyPlace2" &&
+        nameChild3 !== "emptyPlace2" &&
+        nameChild4 !== "emptyPlace2"
+    ) {
+        if (
+            nameChild1 === "triangle" &&
+            nameChild2 === "trapezium" &&
+            nameChild3 === "pentagon" &&
+            nameChild4 === "hexagon"
+        ) {
             addImage(
                 "success",
                 document.getElementsByClassName("question2"),
@@ -1037,6 +990,22 @@ function question2() {
                 2
             );
         } else {
+            if (nameChild1 !== "triangle") {
+                necessaryPlace1.style.border = "2px solid #ED7777";
+            }
+
+            if (nameChild2 !== "trapezium") {
+                necessaryPlace2.style.border = "2px solid #ED7777";
+            }
+
+            if (nameChild3 !== "pentagon") {
+                necessaryPlace3.style.border = "2px solid #ED7777";
+            }
+
+            if (nameChild4 !== "hexagon") {
+                necessaryPlace4.style.border = "2px solid #ED7777";
+            }
+
             addImage(
                 "failure",
                 document.getElementsByClassName("question2"),
@@ -1047,52 +1016,32 @@ function question2() {
             addCorrectAnswerQuestion2();
         }
     } else {
-        highlightUnselectedBlocks(1, 2, numbers2);
+        if (nameChild1 === "emptyPlace2") {
+            necessaryPlace1.style.border = "2px solid #FFB47D";
+        }
+
+        if (nameChild2 === "emptyPlace2") {
+            necessaryPlace2.style.border = "2px solid #FFB47D";
+        }
+
+        if (nameChild3 === "emptyPlace2") {
+            necessaryPlace3.style.border = "2px solid #FFB47D";
+        }
+
+        if (nameChild4 === "emptyPlace2") {
+            necessaryPlace4.style.border = "2px solid #FFB47D";
+        }
     }
 }
 
 // 3 QUESTION
 
 function question3() {
-    let firstRow3p1 =
-        document.getElementsByClassName("leftColumn3")[0].children[0];
-    let secondRow3p1 =
-        document.getElementsByClassName("leftColumn3")[0].children[1];
-    let thirdRow3p1 =
-        document.getElementsByClassName("leftColumn3")[0].children[2];
+    let necessaryPlace1 = document.getElementsByClassName("emptyPlace3")[0];
+    let nameChild1 = necessaryPlace1.children[0].id.slice(0, -1);
 
-    let firstRow3p2 =
-        document.getElementsByClassName("rightColumn3")[0].children[0];
-    let secondRow3p2 =
-        document.getElementsByClassName("rightColumn3")[0].children[1];
-    let thirdRow3p2 =
-        document.getElementsByClassName("rightColumn3")[0].children[2];
-
-    // получаем содежимое блоков
-    let firstRow3 = firstRow3p1.children[1].id;
-    let secondRow3 = secondRow3p1.children[0].id;
-    let thirdRow3 = thirdRow3p1.children[1].id;
-    let fourthRow3 = firstRow3p2.children[0].id;
-    let fifthRow3 = secondRow3p2.children[1].id;
-    let sixthRow3 = thirdRow3p2.children[1].id;
-
-    if (
-        firstRow3 !== "firstEmpty3" &&
-        secondRow3 !== "secondEmpty3" &&
-        thirdRow3 !== "thirdEmpty3" &&
-        fourthRow3 !== "fourthEmpty3" &&
-        fifthRow3 !== "fifthEmpty3" &&
-        sixthRow3 !== "sixthEmpty3"
-    ) {
-        // проверяем на верность для создания статуса
-        if (
-            firstRow3 === "firstBtn3" &&
-            secondRow3 === "fourthBtn3" &&
-            thirdRow3 === "thirdBtn3" &&
-            fourthRow3 === "sixthBtn3" &&
-            fifthRow3 === "fifthBtn3" &&
-            sixthRow3 === "secondBtn3"
-        ) {
+    if (nameChild1 !== "emptyPlace3") {
+        if (nameChild1 === "triangle") {
             addImage(
                 "success",
                 document.getElementsByClassName("question3"),
@@ -1100,42 +1049,8 @@ function question3() {
                 3
             );
         } else {
-            if (firstRow3 !== "firstBtn3") {
-                document.getElementById(firstRow3).style.border =
-                    "2px solid #ED7777";
-
-                addMiniIcon(document.getElementById(firstRow3), "failure");
-            }
-
-            if (secondRow3 !== "fourthBtn3") {
-                document.getElementById(secondRow3).style.border =
-                    "2px solid #ED7777";
-
-                addMiniIcon(document.getElementById(secondRow3), "failure");
-            }
-
-            if (thirdRow3 !== "thirdBtn3") {
-                document.getElementById(thirdRow3).style.border =
-                    "2px solid #ED7777";
-                addMiniIcon(document.getElementById(thirdRow3), "failure");
-            }
-
-            if (fourthRow3 !== "sixthBtn3") {
-                document.getElementById(fourthRow3).style.border =
-                    "2px solid #ED7777";
-                addMiniIcon(document.getElementById(fourthRow3), "failure");
-            }
-
-            if (fifthRow3 !== "fifthBtn3") {
-                document.getElementById(fifthRow3).style.border =
-                    "2px solid #ED7777";
-                addMiniIcon(document.getElementById(fifthRow3), "failure");
-            }
-
-            if (sixthRow3 !== "secondBtn3") {
-                document.getElementById(sixthRow3).style.border =
-                    "2px solid #ED7777";
-                addMiniIcon(document.getElementById(sixthRow3), "failure");
+            if (nameChild1 !== "triangle") {
+                necessaryPlace1.style.border = "2px solid #ED7777";
             }
 
             addImage(
@@ -1148,96 +1063,44 @@ function question3() {
             addCorrectAnswerQuestion3();
         }
     } else {
-        highlightingUnfillededBlocks(6, 3);
+        if (nameChild1 === "emptyPlace3") {
+            necessaryPlace1.style.border = "2px solid #FFB47D";
+        }
     }
 }
 
 // 4 QUESTION
 
 function question4() {
-    // получаем содержимое корзин
-    // let contentBasketFirst = document.getElementById("firstBasket4").children;
+    let necessaryPlace1 = document.getElementsByClassName("emptyPlace4")[0];
+    let necessaryPlace2 = document.getElementsByClassName("emptyPlace4")[1];
+    let necessaryPlace3 = document.getElementsByClassName("emptyPlace4")[2];
+    let necessaryPlace4 = document.getElementsByClassName("emptyPlace4")[3];
+    let necessaryPlace5 = document.getElementsByClassName("emptyPlace4")[4];
+    let necessaryPlace6 = document.getElementsByClassName("emptyPlace4")[5];
 
-    let contentBasketTrue = document.getElementById("firstBasket4").children;
-    let contentBasketFalse = document.getElementById("secondBasket4").children;
-    let contentBasketThird = document.getElementById("thirdBasket4").children;
+    let nameChild1 = necessaryPlace1.children[0].id.slice(0, -1);
+    let nameChild2 = necessaryPlace2.children[0].id.slice(0, -1);
+    let nameChild3 = necessaryPlace3.children[0].id.slice(0, -1);
+    let nameChild4 = necessaryPlace4.children[0].id.slice(0, -1);
+    let nameChild5 = necessaryPlace5.children[0].id.slice(0, -1);
+    let nameChild6 = necessaryPlace6.children[0].id.slice(0, -1);
 
-    // проверяем на пустоту
     if (
-        contentBasketTrue.length > 1 &&
-        contentBasketFalse.length > 1 &&
-        contentBasketThird.length > 1
+        nameChild1 !== "emptyPlace4" &&
+        nameChild2 !== "emptyPlace4" &&
+        nameChild3 !== "emptyPlace4" &&
+        nameChild4 !== "emptyPlace4" &&
+        nameChild5 !== "emptyPlace4" &&
+        nameChild6 !== "emptyPlace4"
     ) {
-        let correctOrderBasketTrue = [
-                "headerBasket4first",
-                "expression24",
-                "expression54",
-            ],
-            correctOrderBasketFalse = [
-                "headerBasket4second",
-                "expression34",
-                "expression44",
-            ],
-            correctOrderBasketThird = [
-                "headerBasket4third",
-                "expression14",
-                "expression64",
-            ],
-            theBasketTrueIsFilledCorrectly = "yes",
-            theBasketFalseIsFilledCorrectly = "yes",
-            theBasketThirdIsFilledCorrectly = "yes";
-
-        // раскрашиваем блоки
-        for (let i = 1; i < contentBasketTrue.length; i++) {
-            let id = contentBasketTrue[i].id;
-
-            succerror(
-                document.getElementById(id),
-                correctOrderBasketTrue.includes(id) === false
-            );
-
-            document.getElementById(id).style.borderRadius = "5px";
-
-            if (correctOrderBasketTrue.includes(id) === false) {
-                theBasketTrueIsFilledCorrectly = "no";
-            }
-        }
-
-        for (let i = 1; i < contentBasketFalse.length; i++) {
-            let id = contentBasketFalse[i].id;
-
-            succerror(
-                document.getElementById(id),
-                correctOrderBasketFalse.includes(id) === false
-            );
-
-            document.getElementById(id).style.borderRadius = "5px";
-
-            if (correctOrderBasketFalse.includes(id) === false) {
-                theBasketFalseIsFilledCorrectly = "no";
-            }
-        }
-
-        for (let i = 1; i < contentBasketThird.length; i++) {
-            let id = contentBasketThird[i].id;
-
-            succerror(
-                document.getElementById(id),
-                correctOrderBasketThird.includes(id) === false
-            );
-
-            document.getElementById(id).style.borderRadius = "5px";
-
-            if (correctOrderBasketThird.includes(id) === false) {
-                theBasketThirdIsFilledCorrectly = "no";
-            }
-        }
-
-        // проверяем на верность для создания статуса
         if (
-            theBasketTrueIsFilledCorrectly === "yes" &&
-            theBasketFalseIsFilledCorrectly === "yes" &&
-            theBasketThirdIsFilledCorrectly === "yes"
+            nameChild1 === "triangle" &&
+            nameChild2 === "trapezium" &&
+            nameChild3 === "pentagon" &&
+            nameChild4 === "hexagon" &&
+            nameChild5 === "pentagon" &&
+            nameChild6 === "hexagon"
         ) {
             addImage(
                 "success",
@@ -1246,6 +1109,30 @@ function question4() {
                 4
             );
         } else {
+            if (nameChild1 !== "triangle") {
+                necessaryPlace1.style.border = "2px solid #ED7777";
+            }
+
+            if (nameChild2 !== "trapezium") {
+                necessaryPlace2.style.border = "2px solid #ED7777";
+            }
+
+            if (nameChild3 !== "pentagon") {
+                necessaryPlace3.style.border = "2px solid #ED7777";
+            }
+
+            if (nameChild4 !== "hexagon") {
+                necessaryPlace4.style.border = "2px solid #ED7777";
+            }
+
+            if (nameChild5 !== "hexagon") {
+                necessaryPlace5.style.border = "2px solid #ED7777";
+            }
+
+            if (nameChild6 !== "hexagon") {
+                necessaryPlace6.style.border = "2px solid #ED7777";
+            }
+
             addImage(
                 "failure",
                 document.getElementsByClassName("question4"),
@@ -1255,40 +1142,30 @@ function question4() {
 
             addCorrectAnswerQuestion4();
         }
-    } else if (
-        contentBasketTrue.length === 1 &&
-        contentBasketThird.length === 1 &&
-        contentBasketFalse.length > 1
-    ) {
-        document.getElementsByClassName("basket4first")[0].style.border =
-            "2px solid #FFB47D";
-        document.getElementsByClassName("basket4third")[0].style.border =
-            "2px solid #FFB47D";
-    } else if (
-        contentBasketFalse.length === 1 &&
-        contentBasketTrue.length === 1 &&
-        contentBasketThird.length > 1
-    ) {
-        document.getElementsByClassName("basket4second")[0].style.border =
-            "2px solid #FFB47D";
-        document.getElementsByClassName("basket4true")[0].style.border =
-            "2px solid #FFB47D";
-    } else if (
-        contentBasketFalse.length === 1 &&
-        contentBasketThird.length === 1 &&
-        contentBasketTrue.length > 1
-    ) {
-        document.getElementsByClassName("basket4second")[0].style.border =
-            "2px solid #FFB47D";
-        document.getElementsByClassName("basket4third")[0].style.border =
-            "2px solid #FFB47D";
     } else {
-        document.getElementsByClassName("basket4first")[0].style.border =
-            "2px solid #FFB47D";
-        document.getElementsByClassName("basket4second")[0].style.border =
-            "2px solid #FFB47D";
-        document.getElementsByClassName("basket4third")[0].style.border =
-            "2px solid #FFB47D";
+        if (nameChild1 === "emptyPlace4") {
+            necessaryPlace1.style.border = "2px solid #FFB47D";
+        }
+
+        if (nameChild2 === "emptyPlace4") {
+            necessaryPlace2.style.border = "2px solid #FFB47D";
+        }
+
+        if (nameChild3 === "emptyPlace4") {
+            necessaryPlace3.style.border = "2px solid #FFB47D";
+        }
+
+        if (nameChild4 === "emptyPlace4") {
+            necessaryPlace4.style.border = "2px solid #FFB47D";
+        }
+
+        if (nameChild5 === "emptyPlace4") {
+            necessaryPlace5.style.border = "2px solid #FFB47D";
+        }
+
+        if (nameChild6 === "emptyPlace4") {
+            necessaryPlace6.style.border = "2px solid #FFB47D";
+        }
     }
 }
 
@@ -2326,9 +2203,9 @@ function question25() {
 
 document.getElementById("submit").onclick = function () {
     question1();
-    // question2();
-    // question3();
-    // question4();
+    question2();
+    question3();
+    question4();
     question5();
     question6();
     question7();

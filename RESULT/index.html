@@ -3,18 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>6 CLASS</title>
-        <script
-            type="text/javascript"
-            src="./propeller/src/propeller.js"
-        ></script>
-        <link
-            rel="stylesheet"
-            href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"
-        />
-        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
         <link rel="stylesheet" href="./common.css" />
+        <title>6 grade</title>
     </head>
     <body>
         <div class="app">
@@ -82,7 +72,12 @@
                                             alt="first fraction"
                                         />
                                     </div>
-                                    <div>
+                                    <div
+                                        class="emptyPlace2"
+                                        ondragstart="drag2(event)"
+                                        ondrop="drop2(event)"
+                                        ondragover="allowDrop(event)"
+                                    >
                                         <img
                                             src="./pictures/2que/emptyPlace2.svg"
                                             alt="empty place"
@@ -103,7 +98,12 @@
                                             alt="third fraction"
                                         />
                                     </div>
-                                    <div>
+                                    <div
+                                        class="emptyPlace2"
+                                        ondragstart="drag2(event)"
+                                        ondrop="drop2(event)"
+                                        ondragover="allowDrop(event)"
+                                    >
                                         <img
                                             src="./pictures/2que/emptyPlace2.svg"
                                             alt="empty place"
@@ -126,7 +126,12 @@
                                             alt="fifth fraction"
                                         />
                                     </div>
-                                    <div>
+                                    <div
+                                        class="emptyPlace2"
+                                        ondragstart="drag2(event)"
+                                        ondrop="drop2(event)"
+                                        ondragover="allowDrop(event)"
+                                    >
                                         <img
                                             src="./pictures/2que/emptyPlace2.svg"
                                             alt="empty place"
@@ -147,7 +152,12 @@
                                             alt="seventh fraction"
                                         />
                                     </div>
-                                    <div>
+                                    <div
+                                        class="emptyPlace2"
+                                        ondragstart="drag2(event)"
+                                        ondrop="drop2(event)"
+                                        ondragover="allowDrop(event)"
+                                    >
                                         <img
                                             src="./pictures/2que/emptyPlace2.svg"
                                             alt="empty place"
@@ -164,28 +174,44 @@
                             </div>
                         </div>
                         <div class="btns2">
-                            <div>
+                            <div
+                                ondragstart="drag2(event)"
+                                ondrop="drop2(event)"
+                                ondragover="allowDrop(event)"
+                            >
                                 <img
                                     src="./pictures/2que/firstBtn2.svg"
                                     alt="first btn"
                                     id="firstBtn20"
                                 />
                             </div>
-                            <div>
+                            <div
+                                ondragstart="drag2(event)"
+                                ondrop="drop2(event)"
+                                ondragover="allowDrop(event)"
+                            >
                                 <img
                                     src="./pictures/2que/secondBtn2.svg"
                                     alt="second btn"
                                     id="secondBtn20"
                                 />
                             </div>
-                            <div>
+                            <div
+                                ondragstart="drag2(event)"
+                                ondrop="drop2(event)"
+                                ondragover="allowDrop(event)"
+                            >
                                 <img
                                     src="./pictures/2que/thirdBtn2.svg"
                                     alt="third btn"
                                     id="thirdBtn20"
                                 />
                             </div>
-                            <div>
+                            <div
+                                ondragstart="drag2(event)"
+                                ondrop="drop2(event)"
+                                ondragover="allowDrop(event)"
+                            >
                                 <img
                                     src="./pictures/2que/fourthBtn2.svg"
                                     alt="fourth btn"
@@ -211,7 +237,12 @@
                                     alt="first expression"
                                 />
                             </div>
-                            <div>
+                            <div
+                                class="emptyPlace3"
+                                ondragstart="drag3(event)"
+                                ondrop="drop3(event)"
+                                ondragover="allowDrop(event)"
+                            >
                                 <img
                                     src="./pictures/3que/emptyPlace3.svg"
                                     alt="empty place"
@@ -226,21 +257,33 @@
                             </div>
                         </div>
                         <div class="bottomRow3">
-                            <div>
+                            <div
+                                ondragstart="drag3(event)"
+                                ondrop="drop3(event)"
+                                ondragover="allowDrop(event)"
+                            >
                                 <img
                                     src="./pictures/3que/firstBtn3.svg"
                                     alt="first btn"
                                     id="firstBtn30"
                                 />
                             </div>
-                            <div>
+                            <div
+                                ondragstart="drag3(event)"
+                                ondrop="drop3(event)"
+                                ondragover="allowDrop(event)"
+                            >
                                 <img
                                     src="./pictures/3que/secondBtn3.svg"
                                     alt="second btn"
                                     id="secondBtn30"
                                 />
                             </div>
-                            <div>
+                            <div
+                                ondragstart="drag3(event)"
+                                ondrop="drop3(event)"
+                                ondragover="allowDrop(event)"
+                            >
                                 <img
                                     src="./pictures/3que/thirdBtn3.svg"
                                     alt="third btn"
@@ -260,42 +303,72 @@
                     <div class="lineUnderHeading4"></div>
                     <div class="content4">
                         <div class="topRow4">
-                            <div>
+                            <div
+                                class="emptyPlace4"
+                                ondragstart="drag4(event)"
+                                ondrop="drop4(event)"
+                                ondragover="allowDrop(event)"
+                            >
                                 <img
                                     src="./pictures/4que/emptyPlace4.svg"
                                     alt="empty place"
                                     id="emptyPlace40"
                                 />
                             </div>
-                            <div>
+                            <div
+                                class="emptyPlace4"
+                                ondragstart="drag4(event)"
+                                ondrop="drop4(event)"
+                                ondragover="allowDrop(event)"
+                            >
                                 <img
                                     src="./pictures/4que/emptyPlace4.svg"
                                     alt="empty place"
                                     id="emptyPlace41"
                                 />
                             </div>
-                            <div>
+                            <div
+                                class="emptyPlace4"
+                                ondragstart="drag4(event)"
+                                ondrop="drop4(event)"
+                                ondragover="allowDrop(event)"
+                            >
                                 <img
                                     src="./pictures/4que/emptyPlace4.svg"
                                     alt="empty place"
                                     id="emptyPlace42"
                                 />
                             </div>
-                            <div>
+                            <div
+                                class="emptyPlace4"
+                                ondragstart="drag4(event)"
+                                ondrop="drop4(event)"
+                                ondragover="allowDrop(event)"
+                            >
                                 <img
                                     src="./pictures/4que/emptyPlace4.svg"
                                     alt="empty place"
                                     id="emptyPlace43"
                                 />
                             </div>
-                            <div>
+                            <div
+                                class="emptyPlace4"
+                                ondragstart="drag4(event)"
+                                ondrop="drop4(event)"
+                                ondragover="allowDrop(event)"
+                            >
                                 <img
                                     src="./pictures/4que/emptyPlace4.svg"
                                     alt="empty place"
                                     id="emptyPlace44"
                                 />
                             </div>
-                            <div>
+                            <div
+                                class="emptyPlace4"
+                                ondragstart="drag4(event)"
+                                ondrop="drop4(event)"
+                                ondragover="allowDrop(event)"
+                            >
                                 <img
                                     src="./pictures/4que/emptyPlace4.svg"
                                     alt="empty place"
@@ -304,42 +377,66 @@
                             </div>
                         </div>
                         <div class="bottomRow4">
-                            <div>
+                            <div
+                                ondragstart="drag4(event)"
+                                ondrop="drop4(event)"
+                                ondragover="allowDrop(event)"
+                            >
                                 <img
                                     src="./pictures/4que/firstBtn4.svg"
                                     alt="first btn"
                                     id="firstBtn40"
                                 />
                             </div>
-                            <div>
+                            <div
+                                ondragstart="drag4(event)"
+                                ondrop="drop4(event)"
+                                ondragover="allowDrop(event)"
+                            >
                                 <img
                                     src="./pictures/4que/secondBtn4.svg"
                                     alt="second btn"
                                     id="secondBtn40"
                                 />
                             </div>
-                            <div>
+                            <div
+                                ondragstart="drag4(event)"
+                                ondrop="drop4(event)"
+                                ondragover="allowDrop(event)"
+                            >
                                 <img
                                     src="./pictures/4que/thirdBtn4.svg"
                                     alt="third btn"
                                     id="thirdBtn40"
                                 />
                             </div>
-                            <div>
+                            <div
+                                ondragstart="drag4(event)"
+                                ondrop="drop4(event)"
+                                ondragover="allowDrop(event)"
+                            >
                                 <img
                                     src="./pictures/4que/fourthBtn4.svg"
                                     alt="fourth btn"
                                     id="fourthBtn40"
                                 />
                             </div>
-                            <div>
+                            <div
+                                ondragstart="drag4(event)"
+                                ondrop="drop4(event)"
+                                ondragover="allowDrop(event)"
+                            >
                                 <img
                                     src="./pictures/4que/fifthBtn4.svg"
                                     alt="fifth btn"
                                     id="fifthBtn40"
                                 />
                             </div>
-                            <div>
+                            <div
+                                ondragstart="drag4(event)"
+                                ondrop="drop4(event)"
+                                ondragover="allowDrop(event)"
+                            >
                                 <img
                                     src="./pictures/4que/sixthBtn4.svg"
                                     alt="sixth btn"
