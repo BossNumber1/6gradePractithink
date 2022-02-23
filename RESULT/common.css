@@ -165,6 +165,10 @@ body {
     top: 160px;
 }
 
+.correctAnswer25 {
+    top: 160px;
+}
+
 .correctAnswer18 {
     top: 190px;
 }
@@ -349,6 +353,10 @@ body {
 }
 
 .contentCorrectAnswer24 {
+    top: 40px;
+}
+
+.contentCorrectAnswer25 {
     top: 40px;
 }
 

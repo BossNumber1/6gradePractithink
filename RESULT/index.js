@@ -363,7 +363,7 @@ function addCorrectAnswerQuestion24() {
 }
 
 function addCorrectAnswerQuestion25() {
-    document.getElementsByClassName("app25")[0].style.height = "900px";
+    document.getElementsByClassName("app25")[0].style.height = "950px";
     addCorrectAnswer(
         "correctAnswer25",
         "25que",
