@@ -13,7 +13,7 @@
     top: 25px;
     left: calc(50% - 770px / 2);
     width: 770px;
-    height: 37px;
+    height: 66px;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -34,8 +34,8 @@
 
 .content25 {
     top: 100px;
-    left: calc(50% - 559px / 2);
-    width: 559px;
+    left: calc(50% - 579px / 2);
+    width: 579px;
     height: 525px;
 }
 
@@ -47,8 +47,8 @@
 }
 
 .centerRow25 {
-    left: calc(50% - 490px / 2);
-    width: 490px;
+    left: calc(50% - 539px / 2);
+    width: 539px;
     height: 30px;
     margin-bottom: 10px;
     display: flex;
