@@ -1,6 +1,6 @@
 .app11 {
     width: 1170px;
-    height: 369px;
+    height: 420px;
     left: calc(50% - 1170px / 2);
     top: 10px;
     box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
@@ -33,20 +33,23 @@
 /* content styles */
 
 .content11 {
-    top: 100px;
-    left: calc(50% - 447px / 2);
-    width: 447px;
-    height: 146.31px;
+    top: 130px;
+    left: calc(50% - 975px / 2);
+    width: 975px;
+    height: 152.15px;
 }
 
 .topRow11 {
-    margin-bottom: 35px;
+    margin-bottom: 70px;
 }
 
 .bottomRow11 {
-    left: calc(50% - 47px / 2);
-    width: 47px;
-    height: 70.31px;
+    left: calc(50% - 139px / 2);
+    width: 139px;
+    height: 30.15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .bottomRow11 input {
@@ -55,16 +58,10 @@
     justify-content: center;
     align-items: center;
     padding: 6px 16px;
-    width: 51.86px;
-    height: 30px;
+    width: 57px;
+    height: 30.15px;
     border: 1px solid #2f2f2f;
     box-sizing: border-box;
     border-radius: 5px;
     text-align: center;
-}
-
-.devil11 {
-    text-align: center;
-    margin-top: -8px;
-    margin-left: -2px;
 }
