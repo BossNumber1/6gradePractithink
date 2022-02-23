@@ -23,7 +23,7 @@
 }
 
 .lineUnderHeading9 {
-    top: 90px;
+    top: 100px;
     position: absolute;
     width: 1169px;
     height: 0px;
@@ -33,7 +33,7 @@
 /* content styles */
 
 .content9 {
-    top: 135px;
+    top: 90px;
     left: calc(50% - 262.5px / 2);
     width: 262.5px;
     height: 89.15px;
