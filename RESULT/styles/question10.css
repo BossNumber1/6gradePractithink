@@ -13,7 +13,7 @@
     top: 25px;
     left: calc(50% - 970px / 2);
     width: 970px;
-    height: 66px;
+    height: 42px;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -26,7 +26,7 @@
 }
 
 .lineUnderHeading10 {
-    top: 120px;
+    top: 95px;
     position: absolute;
     width: 1169px;
     height: 0px;

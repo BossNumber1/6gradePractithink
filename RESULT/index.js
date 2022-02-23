@@ -1418,7 +1418,7 @@ let selectBtn10 = "",
     nameSelectedBtn10 = "";
 
 document.getElementById("firstBtn10").onclick = function () {
-    selectBtn10 = "right";
+    selectBtn10 = "wrong";
     nameSelectedBtn10 = "firstBtn10";
 
     commonForSelectBtn("firstBtn10");
@@ -1442,7 +1442,7 @@ document.getElementById("thirdBtn10").onclick = function () {
 };
 
 document.getElementById("fourthBtn10").onclick = function () {
-    selectBtn10 = "wrong";
+    selectBtn10 = "right";
     nameSelectedBtn10 = "fourthBtn10";
 
     commonForSelectBtn("fourthBtn10");
@@ -1494,7 +1494,7 @@ let numbers11 = {
     secondNumber: "",
 };
 
-gettingDataFromFields(2, [3, 4], 11, numbers11);
+gettingDataFromFields(2, [12, 3], 11, numbers11);
 
 function question11() {
     if (numbers11.firstNumber != "" && numbers11.secondNumber != "") {
