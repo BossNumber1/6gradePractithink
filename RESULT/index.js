@@ -1382,7 +1382,7 @@ let numbers9 = {
     firstNumber: "",
 };
 
-gettingDataFromFields(1, [90], 9, numbers9);
+gettingDataFromFields(1, ["0,9"], 9, numbers9);
 
 function question9() {
     if (numbers9.firstNumber != "") {
